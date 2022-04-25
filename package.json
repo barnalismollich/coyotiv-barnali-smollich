@@ -1,0 +1,56 @@
+{
+  "name": "coyotiv-barnali-smollich",
+  "version": "0.0.1",
+  "description": "In-class examples for node and Javascript",
+  "main": "index_barnali.js",
+  "scripts": {
+    "lint": "lint-staged",
+    "prepare": "husky install",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index_barnali.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "pretty-quick --staged",
+      "eslint --fix"
+    ],
+    "*.+(json|css|md)": [
+      "pretty-quick --staged"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barnalismollich/coyotiv-barnali-smollich.git"
+  },
+  "keywords": [
+    "software",
+    "engineering",
+    "nodejs",
+    "backend"
+  ],
+  "author": "Barnali Smollich <barnaliingermany@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/barnalismollich/coyotiv-barnali-smollich/issues"
+  },
+  "homepage": "https://github.com/barnalismollich/coyotiv-barnali-smollich#readme",
+  "dependencies": {
+    "colors": "^1.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.4.0",
+    "prettier": "^2.6.2",
+    "pretty-quick": "^3.1.3"
+  }
+}
