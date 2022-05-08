@@ -1,0 +1,11 @@
+@startuml activity.puml
+
+start
+
+:Select file;
+:Upload file;
+:Store file;
+
+stop
+
+@enduml

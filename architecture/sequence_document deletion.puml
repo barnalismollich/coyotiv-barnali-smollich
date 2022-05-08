@@ -1,0 +1,18 @@
+@startuml sequence.puml
+
+actor FamilyMember
+participant "Document" as A
+participant "FileStorageEngine" as B
+
+
+FamilyMember -> A: Wants to delete document
+activate A
+
+A--> B: Confirms deletion
+
+B--> A: Document is deleted
+
+A --> FamilyMember: Document is deleted
+deactivate A
+
+@enduml

@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 #{user.firstname} (#{user.birthname}) (#{user.surname})
+  h2 Documents (#{user.documents})
+
+  each document in user.documents
+    h3 #{documents.filename}
+    //- if photo.likedBy.length == 0
+    //-   p no likes yet!
+    //- else
+    //-   p #{photo.likedBy.map(user => user.name).join(', ')}

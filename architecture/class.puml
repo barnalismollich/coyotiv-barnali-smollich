@@ -1,0 +1,24 @@
+@startuml FamilyDiary class diagram
+
+skinparam Shadowing false
+skinparam PackageStyle rectangle
+
+class FamilyMember {
+    Surname: string
+    BirthName: string
+    FirstName: string
+    documents: [Document]
+
+    constructor( {Surname: string, Birthname: string, FirstName: string } =)
+      addDocument(document: Document)
+}
+
+class Document {
+filename: string
+constructor(filename: string)
+}
+
+FamilyMember "1" ---->"0..*" Document: uploads, keeps, deletes
+Document ----> "0..* " FamilyMember: is downloaded
+
+@enduml

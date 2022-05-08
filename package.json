@@ -1,13 +1,13 @@
 {
   "name": "coyotiv-barnali-smollich",
   "version": "0.0.1",
-  "description": "In-class examples for node and Javascript",
-  "main": "index_barnali.js",
+  "private": true,
+  "description": "My project for node and Javascript",
   "scripts": {
+    "start": "node ./bin/www",
     "lint": "lint-staged",
     "prepare": "husky install",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index_barnali.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "husky": {
     "hooks": {
@@ -31,7 +31,8 @@
     "software",
     "engineering",
     "nodejs",
-    "backend"
+    "backend",
+    "frontend"
   ],
   "author": "Barnali Smollich <barnaliingermany@gmail.com>",
   "license": "MIT",
@@ -40,9 +41,20 @@
   },
   "homepage": "https://github.com/barnalismollich/coyotiv-barnali-smollich#readme",
   "dependencies": {
-    "colors": "^1.4.0"
+    "colors": "^1.4.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "livereload": "^0.9.3",
+    "mongoose": "^6.3.2",
+    "mongoose-autopopulate": "^0.16.1",
+    "morgan": "~1.9.1",
+    "pug": "2.0.0-beta11"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.17.0",
+    "connect-livereload": "^0.6.1",
     "eslint": "^8.13.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",

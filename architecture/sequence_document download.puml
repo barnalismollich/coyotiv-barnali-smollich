@@ -1,0 +1,26 @@
+@startuml sequence.puml
+
+actor FamilyMember
+participant "Document" as A
+participant "Document Download" as B
+participant "Document Offline Storage" as C
+
+FamilyMember -> A: Select existing document
+activate A
+
+A -> B: Download document
+activate B
+
+B -> C: Document/file is stored on device
+activate C
+
+C--> B: Document is downloaded
+deactivate C
+
+B -->A: Document is downloaded
+deactivate B
+
+A --> FamilyMember: Document is downloaded
+deactivate A
+
+@enduml

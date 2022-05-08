@@ -1,0 +1,22 @@
+@startuml state.puml
+
+skinparam Shadowing false
+
+state "1 Stored offline" as State1
+state "2 Uploaded" as State2
+state "3 Opened" as State3
+state "4 Downloaded" as State4
+state "5 Deleted" as State5
+
+State1 -[#blue]-> State2: Succeeded
+State1 --> [*]: Aborted
+State2 -[#blue]-> State3: Succeeded
+State2 -[#blue]-> State4: Succeeded
+State2 -[#blue]-> State5: Succeeded
+State3 -->[*]: Aborted
+State4 -[#blue]-> State1 : Succeeded
+State4 -->[*]: Aborted
+State5 -[#blue]->[*]: Succeeded
+State5 -->State2: Aborted
+
+@enduml

@@ -1,0 +1,50 @@
+@startuml state.puml
+
+skinparam Shadowing false
+
+state "File" as State1
+state "Login" as State2
+state "Document list" as State3
+state "Logout" as State4
+
+State1 -l[#blue]-> State2: Succeeded
+State1 -l-> [*]: Aborted
+State2 -l[#blue]-> State3: Succeeded
+State2 -l->[*]: Aborted
+State3 -u[#blue]-> State4: Succeeded
+State3 -u->[*]: Aborted
+
+
+state Upload{
+    [*] -d-> ChoosingFile
+    ChoosingFile -d[#blue]-> UploadFile: Succeeded
+    UploadFile -d-> State3: Aborted
+    UploadFile -d[#blue]-> State3: Succeeded
+}
+
+State3 -u[#blue]-> Upload: Succeeded
+Upload -u-> State3: Aborted
+
+state Download{
+    [*] -d-> ChoosingDownloadFile
+    ChoosingDownloadFile -d[#blue]-> DownloadFile: Succeeded
+    DownloadFile -d-> State3: Aborted
+    DownloadFile -d[#blue]-> State3: Succeeded
+}
+
+State3 -[#blue]-> Download: Succeeded
+Download --> State3: Aborted
+
+state Deletion{
+    [*] -d-> ChoosingDeletionFile
+    ChoosingDeletionFile -d[#blue]-> DeletionFile: Succeeded
+    DeletionFile -d[#red]-> State3: Aborted
+    DeletionFile -d[#blue]-> State3: Succeeded
+}
+
+State3 -[#blue]-> Deletion: Succeeded
+Deletion --> State3: Aborted
+
+State4 -[#blue]-> [*] : Succeeded
+
+@enduml
