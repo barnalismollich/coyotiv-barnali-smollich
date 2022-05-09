@@ -7,9 +7,10 @@ class FamilyMember {
     Surname: string
     BirthName: string
     FirstName: string
+    EMail: string
     documents: [Document]
 
-    constructor( {Surname: string, Birthname: string, FirstName: string } =)
+    constructor( {Surname: string, Birthname: string, FirstName: string, E-Mail, string } =)
       addDocument(document: Document)
 }
 

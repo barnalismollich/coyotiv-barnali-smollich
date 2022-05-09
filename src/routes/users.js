@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
   const query = {}
 
   if (req.query.firstname) {
-    query.firstname = req.query.firstname
+    query.name = req.query.name
   }
 
   res.send(await User.find(query))
@@ -20,13 +20,24 @@ router.get('/initialize', async (req, res) => {
   await User.deleteMany({})
   await Document.deleteMany({})
 
-  const barnali = await User.create({ name: 'barnali' })
+  //const barnali = await User.create({ name: 'barnali' })
   // const armagan = await User.create({ name: 'armagan' })
-
   // const steve = await User.create({ name: 'steve' })
 
-  const Patientenverfuegung = await Document.create({ filename: 'Patientenverfuegung.pdf' })
-  const Betreuungsvollmacht = await Document.create({ filename: 'Betreuungsvollmacht.pdf' })
+  const barnali = await User.create({
+    firstName: 'Barnali',
+    birthName: 'Gupta',
+    lastName: 'Smollich',
+    email: 'barnali@barnaliingermany@gmail.com',
+    password: 'password',
+  })
+
+  const Patientenverfuegung = await Document.create({
+    name: 'Patientenverfuegung.pdf',
+  })
+  const Betreuungsvollmacht = await Document.create({
+    name: 'Betreuungsvollmacht.pdf',
+  })
 
   await barnali.addDocument(Patientenverfuegung)
   await barnali.addDocument(Betreuungsvollmacht)

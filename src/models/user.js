@@ -2,15 +2,19 @@ const mongoose = require('mongoose')
 const autopopulate = require('mongoose-autopopulate')
 
 const userSchema = new mongoose.Schema({
-  firstname: {
+  firstName: {
     type: String,
     required: true,
   },
-  birthname: {
+  birthName: {
     type: String,
     required: true,
   },
-  surname: {
+  lastName: {
+    type: String,
+    required: true,
+  },
+  email: {
     type: String,
     required: true,
   },
