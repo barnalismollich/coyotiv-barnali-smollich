@@ -1,11 +1,11 @@
 extends layout
 
 block content
-  h1 #{user.firstname} (#{user.birthname}) (#{user.surname})
+  h1 #{user.firstName} (#{user.birthName}) (#{user.lastName})
   h2 Documents (#{user.documents})
 
   each document in user.documents
-    h3 #{documents.filename}
+    h3 #{documents.name}
     //- if photo.likedBy.length == 0
     //-   p no likes yet!
     //- else
