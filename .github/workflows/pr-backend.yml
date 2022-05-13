@@ -1,4 +1,4 @@
-name: "PR Backend"
+name: "PR Backend" # create a yml for frontend tests if frontend tests have been set up
 
 on:
   pull_request:
@@ -20,4 +20,8 @@ jobs:
       - name: install dependencies
         run: npm install
       - name: run test
+        env:
+          MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+          MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
+          MONGODB_DATABASE: ${{ secrets.MONGODB_DATABASE }}
         run: npm run test
