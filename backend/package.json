@@ -6,7 +6,6 @@
   "scripts": {
     "start": "node ./bin/www",
     "lint": "lint-staged",
-    "prepare": "husky install",
     "test": "jest",
     "test-coverage": "jest --collect coverage --testEnvironment=node --forceExit --maxWorkers=1"
   },
