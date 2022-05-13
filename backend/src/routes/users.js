@@ -22,6 +22,7 @@ router.post('/', async function (req, res) {
     lastName,
     birthName,
     password,
+    documents,
   })
   res.send(user)
 })
@@ -51,8 +52,16 @@ router.get('/initialize', async (req, res) => {
     firstName: 'Barnali',
     birthName: 'Gupta',
     lastName: 'Smollich',
-    email: 'barnali@barnaliingermany@gmail.com',
-    password: 'coyotiv',
+    email: 'barnaliingermany@gmail.com',
+    password: 'coyotiv1',
+  })
+
+  const tim = await User.create({
+    firstName: 'Tim',
+    birthName: 'Smollich',
+    lastName: 'Smollich',
+    email: 'tim@smollich.de',
+    password: 'coyotiv2',
   })
 
   const Patientenverfuegung = await Document.create({
@@ -64,9 +73,18 @@ router.get('/initialize', async (req, res) => {
 
   await barnali.addDocument(Patientenverfuegung)
   await barnali.addDocument(Betreuungsvollmacht)
+  await tim.addDocument(Patientenverfuegung)
+  await tim.addDocument(Betreuungsvollmacht)
 
   console.log(barnali)
+  res.sendStatus(200)
+})
 
+router.post('/:userId/adds', async (req, res) => {
+  const user = await User.findById(req.params.userId)
+  const document = await Document.findById(req.body.documentId)
+
+  await user.addDocument(document)
   res.sendStatus(200)
 })
 
@@ -75,6 +93,11 @@ router.get('/:userId', async (req, res) => {
 
   if (user) res.render('user', { user })
   else res.sendStatus(404)
+})
+
+router.get('/:userId/json', async (req, res) => {
+  const user = await User.findById(req.params.userId)
+  res.send(user)
 })
 
 module.exports = router
