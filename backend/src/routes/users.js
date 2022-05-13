@@ -5,8 +5,28 @@ const router = express.Router()
 const User = require('../models/user')
 const Document = require('../models/document')
 
-router.post('/', async function (req, res) {
-  const { firstName, birthName, lastName, email, password, documents } = req.body
+// explanation: router please post (=create) into my users the following things...and give me a response from the body
+
+/* GET users listing. */
+router.get('/', async (req, res) => {
+  const query = {}
+
+  if (req.query.firstName) {
+    query.firstName = req.query.firstName
+  }
+
+  res.send(await User.find(query))
+})
+
+/* POST create a user */
+router.post('/', async (req, res) => {
+  const userToCreate = {
+    firstName: req.body.firstName,
+    birthName: req.body.birthName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    password: req.body.password,
+  }
 
   if (!email || !firstName || !birthName || !lastName || !password) {
     res
@@ -16,37 +36,13 @@ router.post('/', async function (req, res) {
       .status(400)
     return
   }
-  const user = await User.create({
-    firstName,
-    email,
-    lastName,
-    birthName,
-    password,
-    documents,
-  })
-  res.send(user)
-})
-
-// explanation: router please post (=create) into my users the following things...and give me a response from the body
-
-/* GET users listing. */
-router.get('/', async (req, res) => {
-  const query = {}
-
-  if (req.query.firstname) {
-    query.name = req.query.name
-  }
-
-  res.send(await User.find(query))
+  const createdUser = await User.create(userToCreate)
+  res.send(createdUser)
 })
 
 router.get('/initialize', async (req, res) => {
   await User.deleteMany({})
   await Document.deleteMany({})
-
-  //const barnali = await User.create({ name: 'barnali' })
-  // const armagan = await User.create({ name: 'armagan' })
-  // const steve = await User.create({ name: 'steve' })
 
   const barnali = await User.create({
     firstName: 'Barnali',
@@ -77,6 +73,7 @@ router.get('/initialize', async (req, res) => {
   await tim.addDocument(Betreuungsvollmacht)
 
   console.log(barnali)
+  console.log(tim)
   res.sendStatus(200)
 })
 
@@ -91,7 +88,7 @@ router.post('/:userId/adds', async (req, res) => {
 router.get('/:userId', async (req, res) => {
   const user = await User.findById(req.params.userId)
 
-  if (user) res.render('user', { user })
+  if (user) res.send('user')
   else res.sendStatus(404)
 })
 

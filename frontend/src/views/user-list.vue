@@ -27,5 +27,6 @@ export default {
     p The time is: {{time}}
     h2 Users
     div (v-for="user in users")
-      router-link(:to="/users/${user._id}`") {{user.name }}
+      router-link(:to="`/users/${user._id}`") {{ user.name }}
+    Counter
 </template>

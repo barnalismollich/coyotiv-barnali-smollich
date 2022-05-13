@@ -9,7 +9,7 @@ if (!connectionString) {
   connectionString = `mongodb+srv://${username}:${password}@cluster0.happj.mongodb.net/${dbName}?retryWrites=true&w=majority`
 }
 
-console.log(connectionString)
+// console.log(connectionString)
 
 mongoose.set('debug', true)
 

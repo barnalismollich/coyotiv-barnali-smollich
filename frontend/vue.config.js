@@ -5,4 +5,5 @@ module.exports = defineConfig({
     allowedHosts: 'all',
     host: '0.0.0.0',
   },
+  lintOnSave: false,
 })
