@@ -2,7 +2,7 @@
 import { mapActions, mapState } from 'vuex'
 
 export default {
-  name: 'Counter',
+  name: 'Counter-component',
   mounted() {
     this.incrementCount()
   },

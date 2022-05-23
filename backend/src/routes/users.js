@@ -25,10 +25,9 @@ router.post('/', async (req, res) => {
     birthName: req.body.birthName,
     lastName: req.body.lastName,
     email: req.body.email,
-    password: req.body.password,
   }
 
-  if (!email || !firstName || !birthName || !lastName || !password) {
+  if (!userToCreate.email || !userToCreate.firstName || !userToCreate.birthName || !userToCreate.lastName) {
     res
       .send({
         message: 'Missing fields.',
@@ -49,7 +48,6 @@ router.get('/initialize', async (req, res) => {
     birthName: 'Gupta',
     lastName: 'Smollich',
     email: 'barnaliingermany@gmail.com',
-    password: 'coyotiv1',
   })
 
   const tim = await User.create({
@@ -57,8 +55,10 @@ router.get('/initialize', async (req, res) => {
     birthName: 'Smollich',
     lastName: 'Smollich',
     email: 'tim@smollich.de',
-    password: 'coyotiv2',
   })
+
+  barnali.setPassword('coyotiv1')
+  tim.setPassword('coyotiv2')
 
   const Patientenverfuegung = await Document.create({
     name: 'Patientenverfuegung.pdf',

@@ -12,8 +12,9 @@ export default {
 
 <template lang="pug">
 .box
-  h1 {{user.firstName}}
+  h1 ({{user.firstName}}) ({{user.birthName}}) ({{user.lastName}})
   h2 Documents ({{user.documents.length}})
+  <button type="button" class="btn btn-primary">Primary</button>
 </template>
 
 <style lang="scss" scoped>

@@ -5,9 +5,10 @@
   "description": "My project for node and Javascript",
   "scripts": {
     "start": "node ./bin/www",
+    "test": "jest --testEnvironment=node --verbose --forceExit --watchAll --maxWorkers=1",
+    "test-coverage": "jest --collect coverage --testEnvironment=node --forceExit --maxWorkers=1",
     "lint": "lint-staged",
-    "test": "jest",
-    "test-coverage": "jest --collect coverage --testEnvironment=node --forceExit --maxWorkers=1"
+    "lint-all": "pretty-quick && eslint"
   },
   "husky": {
     "hooks": {
@@ -41,15 +42,22 @@
   },
   "homepage": "https://github.com/barnalismollich/coyotiv-barnali-smollich#readme",
   "dependencies": {
+    "axios": "^0.27.2",
     "colors": "^1.4.0",
+    "connect-mongo": "^4.6.0",
     "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "express-session": "^1.17.3",
     "http-errors": "~1.6.3",
     "livereload": "^0.9.3",
     "mongoose": "^6.3.2",
     "mongoose-autopopulate": "^0.16.1",
     "morgan": "~1.9.1",
+    "passport": "^0.5.3",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^7.0.0",
     "pug": "2.0.0-beta11"
   },
   "devDependencies": {
