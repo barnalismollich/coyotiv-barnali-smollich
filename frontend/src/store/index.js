@@ -74,25 +74,23 @@ const store = new Vuex.Store({
       commit(mutations.SET_USER, null)
     },
     async goLive({ state, commit }) {
-      // eslint-disable-next-line no-unused-vars
-      socket.emit('go live', state.user._id, status => {
+      socket.emit('go live', state.user._id, () => {
         commit(mutations.SET_LIVE_STREAM, state.user._id)
       })
     },
-    // eslint-disable-next-line no-unused-vars
-    async addLiveStream({ state, commit }, stream) {
+
+    async addLiveStream({ commit }, stream) {
       commit(mutations.ADD_LIVE_STREAM, stream)
     },
     async sendMessageToLiveStream({ state, commit }, body) {
       const message = {
         body,
-        author: state.user.name,
+        author: state.user.firstName,
       }
       commit(mutations.ADD_MESSAGE_TO_LIVE_STREAM, message)
       socket.emit('new message', state.currentLiveStream, message)
     },
-    // eslint-disable-next-line no-unused-vars
-    async joinStream({ state, commit }, stream) {
+    async joinStream({ commit }, stream) {
       socket.emit('join stream', stream)
       commit(mutations.SET_LIVE_STREAM, stream)
     },

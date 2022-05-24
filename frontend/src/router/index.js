@@ -13,7 +13,7 @@ export default function init(store) {
     routes: [
       {
         path: '/',
-        name: 'Profile',
+        name: 'Homepage',
         component: Profile,
       },
       {

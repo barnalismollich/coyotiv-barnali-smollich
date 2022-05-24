@@ -11,6 +11,7 @@ export default {
     return {
       users: [],
       time: new Date(),
+      message: '',
     }
   },
   async created() {

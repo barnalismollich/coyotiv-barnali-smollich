@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-const autopopulate = require('mongoose-autopopulate')
 
 const documentSchema = new mongoose.Schema({
   name: {
@@ -8,5 +7,4 @@ const documentSchema = new mongoose.Schema({
   },
 })
 
-documentSchema.plugin(autopopulate)
 module.exports = mongoose.model('Document', documentSchema)
