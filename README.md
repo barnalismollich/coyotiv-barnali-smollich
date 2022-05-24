@@ -1,6 +1,6 @@
 # coyotiv-barnali-smollich
 
-Hello! This is my folder for my project I did during the training at Coyotiv UG.
+Hello!! This is my folder for my project I did during the training at Coyotiv UG.
 
 Project idea
 My project idea is called: Family diary and documents
