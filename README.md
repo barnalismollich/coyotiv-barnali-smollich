@@ -11,7 +11,8 @@ I want to build a website which will function as a storage of our most important
 
 Goals
 
-Store the most important documents centrally (upload, download, delete, version control?)2.
+Store the most important documents centrally (upload, download, delete, version control?)
+
 Non-Goals
 
 Information/ diary only for family not for the public so shall not be found in search engines
