@@ -7,6 +7,8 @@ export default {
   data() {
     return {
       firstName: '',
+      birthName: '',
+      lastName: '',
       email: '',
       password: '',
       backendError: null,
@@ -20,6 +22,8 @@ export default {
       try {
         await this.register({
           firstName: this.firstName,
+          birthName: this.birthName,
+          lastName: this.lastName,
           email: this.email,
           password: this.password,
         })
@@ -39,6 +43,10 @@ export default {
       h1 Create a new account
       label(for="firstName") firstName:&nbsp;
         input(v-model="firstName" id="firstName" type="text" placeholder="Your first name" required)
+      label(for="birthName") birthName:&nbsp;
+        input(v-model="birthName" id="birthName" type="text" placeholder="Your birth name" required)
+      label(for="lastName") lastName:&nbsp;
+        input(v-model="lastName" id="lastName" type="text" placeholder="Your last name" required)
       label(for="email") Email:&nbsp;
         input(v-model="email" id="email" type="email" placeholder="Your email" required)
       label(for="password") Password:&nbsp;

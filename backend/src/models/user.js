@@ -26,6 +26,10 @@ const userSchema = new mongoose.Schema({
       autopopulate: true,
     },
   ],
+  createdAt: {
+    type: Date,
+    default: new Date(),
+  },
 })
 
 class User {

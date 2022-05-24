@@ -12,6 +12,8 @@ const User = require('./models/user')
 
 require('./database-connection')
 
+const socketService = require('./socket-service')
+
 const clientPromise = mongoose.connection.asPromise().then(connection => connection.getClient())
 
 const indexRouter = require('./routes/index')
@@ -24,7 +26,7 @@ const app = express()
 app.use(
   cors({
     origin: true,
-    creadentials: true,
+    credentials: true,
   })
 )
 
@@ -36,6 +38,8 @@ if (app.get('env') == 'development') {
     .createServer({ extraExts: ['pug'] })
     .watch([`${__dirname}/public`, `${__dirname}/views`])
 }
+
+app.set('io', socketService)
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))

@@ -15,6 +15,18 @@ router.get('/', async (req, res) => {
     query.firstName = req.query.firstName
   }
 
+  if (req.query.birthName) {
+    query.birthName = req.query.birthName
+  }
+
+  if (req.query.lastName) {
+    query.lastName = req.query.lastName
+  }
+
+  if (req.query.email) {
+    query.email = req.query.email
+  }
+
   res.send(await User.find(query))
 })
 
@@ -27,14 +39,14 @@ router.post('/', async (req, res) => {
     email: req.body.email,
   }
 
-  if (!userToCreate.email || !userToCreate.firstName || !userToCreate.birthName || !userToCreate.lastName) {
-    res
-      .send({
-        message: 'Missing fields.',
-      })
-      .status(400)
-    return
-  }
+  // if (!userToCreate.email || !userToCreate.firstName || !userToCreate.birthName || !userToCreate.lastName) {
+  //   res
+  //     .send({
+  //       message: 'Missing fields.',
+  //     })
+  //     .status(400)
+  //   return
+  // }
   const createdUser = await User.create(userToCreate)
   res.send(createdUser)
 })
@@ -43,22 +55,24 @@ router.get('/initialize', async (req, res) => {
   await User.deleteMany({})
   await Document.deleteMany({})
 
-  const barnali = await User.create({
+  const barnali = new User({
     firstName: 'Barnali',
     birthName: 'Gupta',
     lastName: 'Smollich',
     email: 'barnaliingermany@gmail.com',
   })
+  await barnali.setPassword('test')
+  await barnali.save()
 
-  const tim = await User.create({
+  const tim = new User({
     firstName: 'Tim',
     birthName: 'Smollich',
     lastName: 'Smollich',
     email: 'tim@smollich.de',
   })
 
-  barnali.setPassword('coyotiv1')
-  tim.setPassword('coyotiv2')
+  await tim.setPassword('test')
+  await tim.save()
 
   const Patientenverfuegung = await Document.create({
     name: 'Patientenverfuegung.pdf',
