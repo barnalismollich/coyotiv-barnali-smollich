@@ -11,7 +11,6 @@ const cors = require('cors')
 const User = require('./models/user')
 
 require('./database-connection')
-
 const socketService = require('./socket-service')
 
 const clientPromise = mongoose.connection.asPromise().then(connection => connection.getClient())
@@ -38,6 +37,8 @@ if (app.get('env') == 'development') {
     .createServer({ extraExts: ['pug'] })
     .watch([`${__dirname}/public`, `${__dirname}/views`])
 }
+
+app.set('trust proxy', 1)
 
 app.set('io', socketService)
 
