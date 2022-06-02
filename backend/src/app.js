@@ -1,5 +1,8 @@
 const createError = require('http-errors')
 const express = require('express')
+const helmet = require('helmet')
+const bodyParser = require('body-parser')
+const mongoSanitize = require('express-mongo-sanitize')
 const path = require('path')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
@@ -21,6 +24,10 @@ const documentsRouter = require('./routes/documents')
 const accountRouter = require('./routes/account')
 
 const app = express()
+app.use(helmet())
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
+app.use(mongoSanitize())
 
 app.use(
   cors({
