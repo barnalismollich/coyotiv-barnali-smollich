@@ -37,6 +37,10 @@ class User {
     this.documents.push(document)
     await this.save() // necessary for mongoose
   }
+  async addPhoto(photo) {
+    this.photos.push(photo)
+    await this.save()
+  }
 }
 
 userSchema.loadClass(User)

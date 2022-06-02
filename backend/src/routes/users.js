@@ -2,6 +2,11 @@ const express = require('express')
 
 const router = express.Router()
 
+// const axios = require('axios')
+
+const describeImage = require('../lib/image-description')
+const downloadImage = require('../lib/download-image')
+
 const User = require('../models/user')
 const Document = require('../models/document')
 
@@ -51,6 +56,20 @@ router.post('/', async (req, res) => {
   res.send(createdUser)
 })
 
+async function createPhoto(filename) {
+  const photo = await Photo.create({ filename })
+
+  const picsumUrl = `https://picsum.photos/seed/${photo._id}/300/300`
+  const pictureRequest = await axios.get(picsumUrl)
+  photo.filename = pictureRequest.request.path
+
+  const imagePath = await downloadImage(picsumUrl, filename)
+  const description = await describeImage(imagePath)
+  photo.description = description.BestOutcome.Description
+
+  return photo.save()
+}
+
 router.get('/initialize', async (req, res) => {
   await User.deleteMany({})
   await Document.deleteMany({})
@@ -81,6 +100,12 @@ router.get('/initialize', async (req, res) => {
     name: 'Betreuungsvollmacht.pdf',
   })
 
+  const firstPhoto = await createPhoto('first.jpg')
+  const secondPhoto = await createPhoto('second.jpg')
+
+  await addPhoto(firstPhoto)
+  await addPhoto(secondPhoto)
+
   await barnali.addDocument(Patientenverfuegung)
   await barnali.addDocument(Betreuungsvollmacht)
   await tim.addDocument(Patientenverfuegung)
@@ -88,14 +113,17 @@ router.get('/initialize', async (req, res) => {
 
   console.log(barnali)
   console.log(tim)
+
   res.sendStatus(200)
 })
 
 router.post('/:userId/adds', async (req, res) => {
   const user = await User.findById(req.params.userId)
   const document = await Document.findById(req.body.documentId)
+  const photo = await Photo.findById(req.body.photoId)
 
   await user.addDocument(document)
+  await user.addPhoto(photo)
   res.sendStatus(200)
 })
 

@@ -54,4 +54,8 @@ export default {
       form(@submit="sendMessage")
         input(type="text" v-model="message")
         input(type="submit" value="Send message")
+    h2 Photos ({{ user.photos.length }})
+
+    div(v-for="photo in user.photos")
+      img(:src="`https://picsum.photos${photo.filename}`" :alt="photo.description" :title="photo.description")
 </template>
