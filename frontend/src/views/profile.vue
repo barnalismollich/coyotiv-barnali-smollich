@@ -54,6 +54,10 @@ export default {
       form(@submit="sendMessage")
         input(type="text" v-model="message")
         input(type="submit" value="Send message")
+    h2 Photos
+
+      .photo
+        img(:src="`https://picsum.photos/seed/${user.firstName}/200/300`" :alt="user.firstName" :title="user.firstName")
 
 
 </template>
