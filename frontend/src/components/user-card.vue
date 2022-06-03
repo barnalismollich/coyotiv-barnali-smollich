@@ -15,10 +15,10 @@ export default {
   h1 ({{user.firstName}}) ({{user.birthName}}) ({{user.lastName}})
   h2 Documents ({{user.documents.length}})
   <button type="button" class="btn btn-primary">Primary</button>
-  h2 Photos ({{ user.photos.length }})
+  h2 Photos
 
-  .photo(v-for="photo in user.photos")
-    img(:src="`https://picsum.photos${photo.filename}`" :alt="photo.description" :title="photo.description")
+  .photo
+    img(:src="`https://picsum.photos/seed/${user.firstName}/200/300`" :alt="user.firstName" :title="user.firstName")
 </template>
 
 <style lang="scss" scoped>

@@ -40,12 +40,7 @@ export default {
         .col-12.col-lg-6.col-xl-4(v-for="document in documents")
           documentCard(:name="document.name" :description="document.description")
 
-    h2.random-api-pictures-title API to random pictures
-    .container
-      .row
-        .col-12.col-lg-6.col-xl-4(v-for="picture in pictures")
-          pictureCard(:name="picture.name" :description="picture.description")
-  </template>
+</template>
 
 <style lang="scss">
 #app {

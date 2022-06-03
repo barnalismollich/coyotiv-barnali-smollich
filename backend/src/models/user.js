@@ -26,6 +26,13 @@ const userSchema = new mongoose.Schema({
       autopopulate: true,
     },
   ],
+  photos: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Photo',
+      autopopulate: true,
+    },
+  ],
   createdAt: {
     type: Date,
     default: new Date(),
