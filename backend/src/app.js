@@ -21,7 +21,6 @@ const clientPromise = mongoose.connection.asPromise().then(connection => connect
 const indexRouter = require('./routes/index')
 const usersRouter = require('./routes/users')
 const documentsRouter = require('./routes/documents')
-const photosRouter = require('./routes/photos')
 const accountRouter = require('./routes/account')
 
 const app = express()
@@ -94,7 +93,6 @@ app.use('/api/', indexRouter)
 app.use('/api/account', accountRouter)
 app.use('/api/users', usersRouter)
 app.use('/api/documents', documentsRouter)
-app.use('/api/photos', photosRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

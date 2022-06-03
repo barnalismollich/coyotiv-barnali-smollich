@@ -18,7 +18,7 @@ export default {
   h2 Photos ({{ user.photos.length }})
 
   .photo(v-for="photo in user.photos")
-    img(:src="`https://picsum.photos${photo.filename}`" :alt="photo.description" :title="photo.description")
+    img(:src="`https://picsum.photos/seed/${user.firstName}/200/300`" :alt="user.firstName" :title="user.firstName")
 </template>
 
 <style lang="scss" scoped>
