@@ -99,6 +99,8 @@ router.post('/:userId/adds', async (req, res) => {
   const document = await Document.findById(req.body.documentId)
 
   await user.addDocument(document)
+
+  res.sendStatus(200)
 })
 
 router.get('/:userId', async (req, res) => {
