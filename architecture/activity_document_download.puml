@@ -1,0 +1,11 @@
+@startuml activity.puml
+
+start
+
+:Select file from FamilyDiary;
+:Download file;
+:Store file offline;
+
+stop
+
+@enduml

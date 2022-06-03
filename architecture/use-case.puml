@@ -1,0 +1,38 @@
+@startuml use-case.puml
+
+left to right direction
+
+skinparam Shadowing false
+skinparam PackageStyle rectangle
+
+actor "A FamilyMember" as user
+actor "A FamilyMember" as admin
+
+package "Document"{
+usecase "Upload document" as UC1
+usecase "Opening document" as UC2
+usecase "Delete document" as UC3
+usecase "Download document" as UC4
+}
+
+package "LoginLogout"{
+usecase "Login" as UC5
+usecase "Logout" as UC6
+}
+
+package "User Administration"{
+usecase "Register new user" as UC7
+usecase "Delete user" as UC8
+}
+
+user --> UC1
+user --> UC2
+user --> UC3
+user --> UC4
+user --> UC5
+user --> UC6
+
+admin --> UC7
+admin --> UC8
+
+@enduml

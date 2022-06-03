@@ -1,0 +1,26 @@
+@startuml sequence.puml
+
+actor FamilyMember
+participant "Document" as A
+participant "Document Upload" as B
+participant "Document Online Storage" as C
+
+FamilyMember -> A: Select file from device
+activate A
+
+A -> B: Upload file
+activate B
+
+B -> C: Store file as document
+activate C
+
+C--> B: Document is stored
+deactivate C
+
+B -->A: Document is stored
+deactivate B
+
+A --> FamilyMember: Document is stored
+deactivate A
+
+@enduml
