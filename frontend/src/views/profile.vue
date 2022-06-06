@@ -33,7 +33,7 @@ export default {
 
 <template lang="pug">
   .home
-    h1 BLABLABLA instead of ....
+    h1 Family Diary - a project by Barnali Smollich
     p The time is: {{time}}
     h2 Users
     div(v-for="user in users")
@@ -57,7 +57,7 @@ export default {
     h2 Photos
 
       .photo
-        img(:src="`https://picsum.photos/seed/${user.barnali}/200/300`" :alt="user.firstName" :title="user.firstName")
+        img(:src="https://picsum.photos/seed/200/300" :alt="user.firstName" :title="user.firstName")
 
 
 </template>
