@@ -57,7 +57,7 @@ export default {
     h2 Photos
 
       .photo
-        img(:src="https://picsum.photos/seed/200/300" :alt="user.firstName" :title="user.firstName")
+        img(:src="`https://picsum.photos/seed/200/300`" :alt="user.firstName" :title="user.firstName")
 
 
 </template>
