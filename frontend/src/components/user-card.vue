@@ -17,7 +17,7 @@ export default {
   <button type="button" class="btn btn-primary">Primary</button>
 
 .photo
-  img(:src="`https://picsum.photos/seed/${user.firstName}/200/300`" :alt="user.firstName" :title="user.firstName")
+  img(:src="`https://picsum.photos/seed/picsum/200/300`" :alt="random-picture" :title="random-picture")
 </template>
 
 <style lang="scss" scoped>

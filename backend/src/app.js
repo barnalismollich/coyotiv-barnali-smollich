@@ -10,7 +10,11 @@ const session = require('express-session')
 const MongoStore = require('connect-mongo')
 const passport = require('passport')
 const mongoose = require('mongoose')
+const multer = require('multer')
+const upload = multer({ dest: 'uploads/' })
+
 const cors = require('cors')
+
 const User = require('./models/user')
 
 require('./database-connection')
@@ -113,6 +117,21 @@ app.use(function (err, req, res, next) {
     message: err.message,
     stack: req.app.get('env') == 'development' ? err.stack : '',
   })
+})
+
+// app.post('/upload_files', upload.array('files'), uploadFiles)
+// function uploadFiles(req, res) {
+//   console.log(req.body)
+//   console.log(req.files)
+//   res.json({ message: 'Successfully uploaded files' })
+// }
+// app.listen(8080, () => {
+//   console.log(`Server started...`)
+// })
+
+app.post('/api/profile', upload.single('document'), function (req, res, next) {
+  // req.file is the `document` file
+  // req.body will hold the text fields, if there were any
 })
 
 console.log('I am alive!')
