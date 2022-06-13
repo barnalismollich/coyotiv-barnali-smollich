@@ -14,10 +14,10 @@ export default {
 .box
   h1 ({{user.firstName}}) ({{user.birthName}}) ({{user.lastName}})
   h2 Documents ({{user.documents.length}})
-  <button type="button" class="btn btn-primary">Primary</button>
+  // <button type="button" class="btn btn-primary">Primary</button>
 
-.photo
-  img(:src="`https://picsum.photos/seed/picsum/200/300`" :alt="random-picture" :title="random-picture")
+//- .photo
+//-   img(:src="`https://picsum.photos/seed/picsum/200/300`" :alt="random-picture" :title="random-picture")
 </template>
 
 <style lang="scss" scoped>

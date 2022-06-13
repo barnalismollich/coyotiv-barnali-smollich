@@ -82,11 +82,31 @@ router.get('/initialize', async (req, res) => {
   const Betreuungsvollmacht = await Document.create({
     name: 'Betreuungsvollmacht.pdf',
   })
+  const Testament = await Document.create({
+    name: 'Testament.pdf',
+  })
+  const Personalausweis = await Document.create({
+    name: 'Personalausweis.pdf',
+  })
+  const Bankvollmacht = await Document.create({
+    name: 'Bankvollmacht.pdf',
+  })
+  const Other = await Document.create({
+    name: 'Other.pdf',
+  })
 
   await barnali.addDocument(Patientenverfuegung)
   await barnali.addDocument(Betreuungsvollmacht)
+  await barnali.addDocument(Testament)
+  await barnali.addDocument(Personalausweis)
+  await barnali.addDocument(Bankvollmacht)
+  await barnali.addDocument(Other)
   await tim.addDocument(Patientenverfuegung)
   await tim.addDocument(Betreuungsvollmacht)
+  await tim.addDocument(Testament)
+  await tim.addDocument(Personalausweis)
+  await tim.addDocument(Bankvollmacht)
+  await tim.addDocument(Other)
 
   console.log(barnali)
   console.log(tim)

@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'documentCard',
+  name: 'DocumentCard',
   props: {
     name: String,
     description: String,
@@ -21,6 +21,8 @@ export default {
 .card-container {
   border: 1px solid #d0d0d0;
   padding: 12px;
+  background-color: #997d7d;
+  color: white;
   margin-bottom: 24px;
   border-radius: 8px;
 }
