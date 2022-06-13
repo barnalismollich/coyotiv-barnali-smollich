@@ -1,11 +1,3 @@
-<template lang="pug">
-.card-container
-  h3 {{ name }}
-  p {{ description }}
-  button.btn.btn-primary Document
-
-</template>
-
 <script>
 export default {
   name: 'documentCard',
@@ -15,6 +7,14 @@ export default {
   },
 }
 </script>
+
+<template lang="pug">
+.card-container
+  h3 {{ name }}
+  p {{ description }}
+  button.btn.btn-primary Document
+
+</template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>

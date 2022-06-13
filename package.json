@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/barnalismollich/coyotiv-barnali-smollich/issues"
   },
-  "homepage": "https://github.com/barnalismollich/coyotiv-barnali-smollich#readme"
+  "homepage": "https://github.com/barnalismollich/coyotiv-barnali-smollich#readme",
+  "dependencies": {
+    "multer-cloud-storage": "^2.8.0"
+  }
 }

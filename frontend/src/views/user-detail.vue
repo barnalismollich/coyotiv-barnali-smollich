@@ -1,11 +1,12 @@
 <script>
-import Counter from '@/components/counter.vue'
+// import Counter from '@/components/counter.vue'
 import UserCard from '@/components/user-card.vue'
+import documentCard from '@/components/document-card.vue'
 import { mapActions } from 'vuex'
 
 export default {
   name: 'UserDetail',
-  components: { UserCard, Counter },
+  components: { UserCard, documentCard },
   data() {
     return {
       user: null,
@@ -22,7 +23,12 @@ export default {
 
 <template lang="pug">
   .about
-    h1 This is a user detail
+    h1 Here you can find the documents of each family member i.e. each user
     UserCard(:user="user" v-if="user")
-    Counter
+    // documentCard(:name="document.name" :description="document.description")
+    // Counter
+    <form action="/api/upload" method="post" enctype="multipart/form-data">
+      <input type="file" id="file" name="file" />
+      <input type="submit" name="submit" />
+    </form>
 </template>

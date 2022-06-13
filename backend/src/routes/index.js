@@ -1,32 +1,30 @@
 const express = require('express')
 const router = express.Router()
-/* GET home page. */
-router.get('/', (req, res) => {
-  res.render('index', { title: 'Family Diary - a project by Barnali Smollich' })
-})
-router.get('/bootstrap', (req, res) => {
-  res.render('bootstrap', { title: 'bootstrap' })
-})
-
-//multer object creation
 const multer = require('multer')
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'public/uploads/')
+    cb(null, '/uploads')
   },
   filename: function (req, file, cb) {
-    cb(null, file.originalname)
+    cb(null, file.fieldname)
   },
 })
 
 const upload = multer({ storage: storage })
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Express' })
+router.get('/', (req, res) => {
+  res.render('index', { title: 'Family Diary - a project by Barnali Smollich' })
+  console.log('index rendered')
+})
+router.get('/bootstrap', (req, res) => {
+  res.render('bootstrap', { title: 'bootstrap' })
+})
+router.post('/upload', upload.single('file'), function (req, res, next) {
+  // req.file is the `avatar` file
+  // req.body will hold the text fields, if there were any
+  console.log('file uploaded')
+  res.send('Datei wurde erfolgreich hochgeladen')
 })
 
-router.post('/', upload.single('imageupload'), function (req, res) {
-  res.send('File upload sucessfully.')
-})
 module.exports = router

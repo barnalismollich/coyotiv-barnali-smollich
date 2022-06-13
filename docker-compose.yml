@@ -16,6 +16,7 @@ services:
     volumes:
       - ./frontend/src:/app/src
       - ./frontend/public:/app/public
+      - ./uploads:/uploads
   backend:
     image: backend
     build:
@@ -36,6 +37,7 @@ services:
     volumes:
       - ./backend/src:/app/src
       - ./backend/test:/app/test
+      - ./uploads:/uploads
   mongo:
     image: mongo
     ports:

@@ -3,23 +3,11 @@ extends layout
 block content
   .page
     nav
-      span logo
+      span logo_familydiary
     main
       h1= title
       p Welcome to #{title}
       #promo
-        .promo-title FamilyDiary - a project created by Barnali Smollich
+        .promo-title FamilyDiary
         //- button.answer.answer-yes Yes!
         //- button.answer.answer-no No?
-
-    //- form
-    //-   (method='post', enctype='multipart/form-data')
-    //-   input(type='file', name='documentUpload')
-    //-   input(type='submit', name='uploadDocument', value='Upload Document')
-
-    form
-      action="/stats" enctype="multipart/form-data" method="post"
-      div(class="form-group")
-      input(type="file" class="form-control-file" name="uploaded_file")
-      input(type="text" class="form-control" placeholder="Number of speakers" name="nspeakers")
-      input(type="submit" value="Get me the stats!" class="btn btn-default")

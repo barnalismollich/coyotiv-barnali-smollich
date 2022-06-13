@@ -12,19 +12,16 @@ export default {
 
 <template lang="pug">
 .box
-  h1 ({{user.firstName}}) ({{user.birthName}}) ({{user.lastName}})
-  h2 Documents ({{user.documents.length}})
-  <button type="button" class="btn btn-primary">Primary</button>
+  h1 These are the documents of {{user.firstName}} {{user.lastName}} born {{user.birthName}}
+  h2 He/She has {{user.documents.length}} documents
 
-.photo
-  img(:src="`https://picsum.photos/seed/picsum/200/300`" :alt="random-picture" :title="random-picture")
 </template>
 
 <style lang="scss" scoped>
 .box {
   padding: 2rem;
-  border: 1px solid #c80;
-  background: #dd0;
+  border: 1px solid rgb(24, 204, 0);
+  background: rgb(85, 221, 0);
   border-radius: 0.3rem;
 }
 </style>
