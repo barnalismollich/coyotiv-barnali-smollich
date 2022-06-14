@@ -3,6 +3,10 @@ import VueRouter from 'vue-router'
 import Profile from '../views/profile.vue'
 import Login from '../views/login.vue'
 import Register from '../views/register.vue'
+import PrivacyPolicy from '../views/privacy-policy.vue'
+import TermsOfUse from '../views/terms-of-use.vue'
+import CookiesPolicy from '../views/cookies-policy.vue'
+import Disclaimer from '../views/disclaimer.vue'
 
 Vue.use(VueRouter)
 
@@ -22,6 +26,7 @@ export default function init(store) {
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
+
         component: () => import(/* webpackChunkName: "about" */ '../views/user-detail.vue'),
       },
       {
@@ -50,6 +55,26 @@ export default function init(store) {
           if (!store.state.user) return next('/login')
           return next()
         },
+      },
+      {
+        path: '/privacy-policy',
+        name: 'privacy-policy',
+        component: PrivacyPolicy,
+      },
+      {
+        path: '/terms-of-use',
+        name: 'terms-of-use',
+        component: TermsOfUse,
+      },
+      {
+        path: '/cookies-policy',
+        name: 'cookies-policy',
+        component: CookiesPolicy,
+      },
+      {
+        path: '/disclaimer',
+        name: 'disclaimer',
+        component: Disclaimer,
       },
     ],
   })

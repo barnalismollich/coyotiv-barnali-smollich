@@ -51,6 +51,7 @@ export default {
             li.nav-item
               a.nav-link(@click="doLogout" href="#") Logout
 
+
     nav#nav.navbar.fixed-bottom.navbar-expand-lg.bg-light
       .container-fluid
         button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarTogglerDemo01', aria-controls='navbarTogglerDemo01', aria-expanded='false', aria-label='Toggle navigation')
@@ -59,14 +60,14 @@ export default {
           router-link.navbar-brand(to='/') FamilyDiary
           ul.navbar-nav.me-auto.mb-2.mb-lg-0
             li.nav-item
-              router-link.nav-link(to="/privacypolicy") Privacy Policy
+              router-link.nav-link(to="/privacy-policy") Privacy Policy
               //- a.nav-link.active(aria-current='page', href='#') Home
             li.nav-item
-              router-link.nav-link(to="/login") Terms of Use
+              router-link.nav-link(to="/terms-of-use") Terms of Use
             li.nav-item
-              router-link.nav-link(to="/register") Cookies Policy
+              router-link.nav-link(to="/cookies-policy") Cookies Policy
             li.nav-item
-              router-link.nav-link(to="/register") Disclaimer
+              router-link.nav-link(to="/disclaimer") Disclaimer
     router-view
 
     //- h2.filled-out-documents-title Filled out documents
@@ -80,11 +81,13 @@ export default {
 <style lang="scss">
 #app {
   margin: 0 2rem;
+  margin-left: 12px;
   margin-top: 10px;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: rgb(15, 15, 15);
+  //background-color: #141a19bc;
   // .filled-out-documents-title {
   //   color: green;
   //   margin-bottom: 24px;
@@ -95,7 +98,7 @@ export default {
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: rgb(15, 15, 15);
     margin: 0 1rem;
 
     &.router-link-exact-active {

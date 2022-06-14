@@ -12,14 +12,20 @@ block content
         //- button.answer.answer-yes Yes!
         //- button.answer.answer-no No?
 
+        form(action="/api/upload" method='post', enctype='multipart/form-data')
+          label(for="document") Upload a document
+          input#document(type='file', name='anna_is_sleepy')
+          input(type='submit', name='uploadDocument', value='Upload Document')
+
+
     //- form
     //-   (method='post', enctype='multipart/form-data')
     //-   input(type='file', name='documentUpload')
     //-   input(type='submit', name='uploadDocument', value='Upload Document')
 
-    form
-      action="/stats" enctype="multipart/form-data" method="post"
-      div(class="form-group")
-      input(type="file" class="form-control-file" name="uploaded_file")
-      input(type="text" class="form-control" placeholder="Number of speakers" name="nspeakers")
-      input(type="submit" value="Get me the stats!" class="btn btn-default")
+    //- form
+    //-   action="/stats" enctype="multipart/form-data" method="post"
+    //-   div(class="form-group")
+    //-   input(type="file" class="form-control-file" name="uploaded_file")
+    //-   input(type="text" class="form-control" placeholder="Number of speakers" name="nspeakers")
+    //-   input(type="submit" value="Get me the stats!" class="btn btn-default")

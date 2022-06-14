@@ -1,28 +1,11 @@
 const express = require('express')
 const router = express.Router()
-/* GET home page. */
-router.get('/', (req, res) => {
-  res.render('index', {
-    title: 'Family Diary',
-  })
-})
-router.get('/bootstrap', (req, res) => {
-  res.render('bootstrap', { title: 'bootstrap' })
-})
 
 //
 //    Use multer for uploading documents.
 //
 const multer = require('multer')
 
-// const storage = multer.diskStorage({
-//   destination: function (req, file, cb) {
-//     cb(null, 'public/uploads/')
-//   },
-//   filename: function (req, file, cb) {
-//     cb(null, file.originalname)
-//   },
-// })
 //
 //    For now, store them in the backend container.
 //
@@ -30,6 +13,7 @@ const multer = require('multer')
 //
 const upload = multer({ dest: 'where_i_will_store_my_files/' })
 
+//
 //    Render/Display the page that will allow us to do an upload
 //
 //    This will be the upload.pug file in 'views'
@@ -55,6 +39,19 @@ router.post('/upload', upload.single('anna_is_sleepy'), function (req, res) {
   res.render('upload', { title: 'WOT?' })
 
   // res.send('File upload sucessfully.').status(200)
+})
+
+//
+//    Some more examples
+//
+router.post('/photos/upload', upload.array('photos', 12), function (req, res, next) {
+  // req.files is array of `photos` files
+  // req.body will contain the text fields, if there were any
+})
+
+router.post('/profile', upload.single('avatar'), function (req, res, next) {
+  // req.file is the `avatar` file
+  // req.body will hold the text fields, if there were any
 })
 
 module.exports = router

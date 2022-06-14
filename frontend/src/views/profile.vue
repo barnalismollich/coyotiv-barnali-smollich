@@ -34,17 +34,12 @@ export default {
 <template lang="pug">
   .home
     br
-    h1 Family Diary - a project by Barnali Smollich
+    h1 Family Diary
     //- p The time is: {{time}}
-    br
-    h2 Who is already registered?
-    div(v-for="user in users")
-      router-link(:to="`/users/${user._id}`") {{ user.firstName }}
-    div(v-if="liveStreams.length")
     br
     h2 What do you want to do?
     .container
-      .box(style='width: 20rem; height: 12rem')
+      .box(style='width: 100%; height: 100%')
         #carouselExampleCaptions.carousel.slide(data-bs-ride='carousel')
           .carousel-indicators
             button.active(type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
@@ -52,17 +47,17 @@ export default {
             button(type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide-to='2' aria-label='Slide 3')
           .carousel-inner
             .carousel-item.active
-              img.d-block.w-100(alt="random-picture-for-layout" width=100 src="https://picsum.photos/id/102/300/200")
-              .carousel-caption.d-none.d-md-block
+              img.d-block.w-80(src="https://picsum.photos/id/102/300/200", alt="random-picture-for-layout")
+              .carousel-caption.d-none.d-sm-block
                 h5 Welcome
                 p If you are a family member, please login!
             .carousel-item
-              img.d-block.w-100(alt="random-picture-for-layout" width=100 src="https://picsum.photos/id/147/300/200")
+              img.d-block.w-100(alt="random-picture-for-layout" width=50 src="https://picsum.photos/id/147/300/200")
               .carousel-caption.d-none.d-md-block
                 h5 If you do not have a username and password please write to
                 p barnaliingermany@gmail.com
             .carousel-item
-              img.d-block.w-100(alt="random-picture-for-layout" width=100 src="https://picsum.photos/id/198/300/200")
+              img.d-block.w-100(alt="random-picture-for-layout" width=50 src="https://picsum.photos/id/198/300/200")
               .carousel-caption.d-none.d-md-block
                 h5 Please be aware that only family members are allowed to sign in
                 p Thank you!
@@ -73,11 +68,12 @@ export default {
             span.carousel-control-next-icon(aria-hidden='true')
             span.visually-hidden Next
     br
-    h2 Do you want to speak to someone?
-    div(v-for="stream in liveStreams")
-      p {{ stream }}
-      button(@click="joinStream(stream)") Join stream
-    button(@click="goLive") Click here to take part
+    div(v-if="liveStreams.length")
+      h2 Do you want to speak to someone?
+      div(v-for="stream in liveStreams")
+        p {{ stream }}
+        button(@click="joinStream(stream)") Join stream
+    button(@click="goLive") Click here to chat
     div(v-if="currentLiveStream")
       h3 Live stream
       .messages
@@ -88,16 +84,20 @@ export default {
       form(@submit="sendMessage")
         input(type="text" v-model="message")
         input(type="submit" value="Send message")
-
+    br
+    h2 Who is already registered?
+    div(v-for="user in users")
+      router-link(:to="`/users/${user._id}`") {{ user.firstName }}
+    br
 </template>
 
 <style scoped>
 .container {
   /* border: 1px solid #d0d0d0; */
   padding: 12px;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   margin-top: 12px;
-  margin-left: 10px;
+  margin-left: 12px;
   /* border-radius: 8px; */
 }
 </style>

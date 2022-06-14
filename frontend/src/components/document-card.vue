@@ -2,8 +2,8 @@
 .card-container
   h3 {{ name }}
   p {{ description }}
-  button.btn.btn-primary Document
-
+  a.button.btn.btn-primary.link(href='/') Open document
+  //- a.card-container.link(href="/") Go to document
 </template>
 
 <script>
@@ -21,9 +21,10 @@ export default {
 .card-container {
   border: 1px solid #d0d0d0;
   padding: 12px;
-  background-color: #997d7d;
-  color: white;
+  background-color: #f4eeee;
+  color: rgb(15, 15, 15);
   margin-bottom: 24px;
+  margin-left: 12px;
   border-radius: 8px;
 }
 </style>

@@ -24,7 +24,10 @@ export default {
         { name: 'Patientenverfuegung', description: 'What should happen if you cannot express your will' },
         { name: 'Betreuungsvollmacht', description: 'Who is allowed to handle the administrative work' },
         { name: 'Testament', description: 'Who gets what after your death' },
-        { name: 'Personalausweis', description: 'Your passport number' },
+        {
+          name: 'Personalausweis',
+          description: 'It is not allowed to store a copy of the passport but save the number',
+        },
         { name: 'Bankvollmacht', description: 'Who has access to your bank accounts as a representative' },
         { name: 'Other', description: 'Which other documents are important for you' },
       ],
@@ -40,9 +43,9 @@ export default {
   .about
     br
     h1 Documents for emergency cases
-    UserCard(:user="user" v-if="user")
+      UserCard(:user="user" v-if="user")
     br
-    h2.filled-out-documents-title At present you can find the following documents here
+    h2 Please click on the button to open the document
     br
     .container
       .row
@@ -52,14 +55,11 @@ export default {
 </template>
 
 <style lang="scss">
+.about {
+  margin-left: 40px;
+}
 .container {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  color: #2c3e50;
-  margin-left: 10px;
-}
-.filled-out-documents-title {
-  color: green;
-  margin-bottom: 24px;
-  background: bg-secondary;
+  color: rgb(15, 15, 15);
 }
 </style>
