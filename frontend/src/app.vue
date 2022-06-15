@@ -34,40 +34,42 @@ export default {
     //-   a(@click="doLogout" href="#") Logout
 
 
-    nav#nav.navbar.navbar-expand-lg.bg-light
-      .container-fluid
-        button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarTogglerDemo01', aria-controls='navbarTogglerDemo01', aria-expanded='false', aria-label='Toggle navigation')
-          span.navbar-toggler-icon
-        #navbarTogglerDemo01.collapse.navbar-collapse
-          router-link.navbar-brand(to='/') FamilyDiary
-          ul.navbar-nav.me-auto.mb-2.mb-lg-0
-            li.nav-item
-              router-link.nav-link(to="/profile") Profile
-              //- a.nav-link.active(aria-current='page', href='#') Home
-            li.nav-item
-              router-link.nav-link(to="/login") Login
-            li.nav-item
-              router-link.nav-link(to="/register") Register
-            li.nav-item
-              a.nav-link(@click="doLogout" href="#") Logout
+    //- nav#nav.navbar.navbar-expand-lg.bg-light
+    //-   .container-fluid
+    //-     button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarTogglerDemo01', aria-controls='navbarTogglerDemo01', aria-expanded='false', aria-label='Toggle navigation')
+    //-       span.navbar-toggler-icon
+    //-     #navbarTogglerDemo01.collapse.navbar-collapse
+    //-       router-link.navbar-brand(to='/') FamilyDiary
+    //-       ul.navbar-nav.me-auto.mb-2.mb-lg-0
+    //-         li.nav-item
+    //-           router-link.nav-link(to="/profile") Profile
+    //-           //- a.nav-link.active(aria-current='page', href='#') Home
+    //-         li.nav-item
+    //-           router-link.nav-link(to="/login") Login
+    //-         li.nav-item
+    //-           router-link.nav-link(to="/register") Register
+    //-         li.nav-item
+    //-           a.nav-link(@click="doLogout" href="#") Logout
 
 
-    nav#nav.navbar.fixed-bottom.navbar-expand-lg.bg-light
-      .container-fluid
-        button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarTogglerDemo01', aria-controls='navbarTogglerDemo01', aria-expanded='false', aria-label='Toggle navigation')
-          span.navbar-toggler-icon
-        #navbarTogglerDemo01.collapse.navbar-collapse
-          router-link.navbar-brand(to='/') FamilyDiary
-          ul.navbar-nav.me-auto.mb-2.mb-lg-0
-            li.nav-item
-              router-link.nav-link(to="/privacy-policy") Privacy Policy
-              //- a.nav-link.active(aria-current='page', href='#') Home
-            li.nav-item
-              router-link.nav-link(to="/terms-of-use") Terms of Use
-            li.nav-item
-              router-link.nav-link(to="/cookies-policy") Cookies Policy
-            li.nav-item
-              router-link.nav-link(to="/disclaimer") Disclaimer
+    //- nav#nav.navbar.fixed-bottom.navbar-expand-lg.bg-light
+    //-   .container-fluid
+    //-     button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarTogglerDemo01', aria-controls='navbarTogglerDemo01', aria-expanded='false', aria-label='Toggle navigation')
+    //-       span.navbar-toggler-icon
+    //-     #navbarTogglerDemo01.collapse.navbar-collapse
+    //-       router-link.navbar-brand(to='/') FamilyDiary
+    //-       ul.navbar-nav.me-auto.mb-2.mb-lg-0
+    //-         li.nav-item
+    //-           router-link.nav-link(to="/privacy-policy") Privacy Policy
+    //-           //- a.nav-link.active(aria-current='page', href='#') Home
+    //-         li.nav-item
+    //-           router-link.nav-link(to="/terms-of-use") Terms of Use
+    //-         li.nav-item
+    //-           router-link.nav-link(to="/cookies-policy") Cookies Policy
+    //-         li.nav-item
+    //-           router-link.nav-link(to="/disclaimer") Disclaimer
+    //-         li.nav-item
+    //-         router-link.nav-link(to="/test-page") Test page
     router-view
 
     //- h2.filled-out-documents-title Filled out documents
@@ -79,31 +81,31 @@ export default {
 </template>
 
 <style lang="scss">
-#app {
-  margin: 0 2rem;
-  margin-left: 12px;
-  margin-top: 10px;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: rgb(15, 15, 15);
-  //background-color: #141a19bc;
-  // .filled-out-documents-title {
-  //   color: green;
-  //   margin-bottom: 24px;
-  // }
-}
-#nav {
-  padding: 18px;
+// #app {
+//   margin: 0 2rem;
+//   margin-left: 12px;
+//   margin-top: 10px;
+//   font-family: Avenir, Helvetica, Arial, sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   color: rgb(15, 15, 15);
+//   //background-color: #141a19bc;
+//   // .filled-out-documents-title {
+//   //   color: green;
+//   //   margin-bottom: 24px;
+//   // }
+// }
+// #nav {
+//   padding: 18px;
 
-  a {
-    font-weight: bold;
-    color: rgb(15, 15, 15);
-    margin: 0 1rem;
+//   a {
+//     font-weight: bold;
+//     color: rgb(15, 15, 15);
+//     margin: 0 1rem;
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+//     &.router-link-exact-active {
+//       color: #42b983;
+//     }
+//   }
+// }
 </style>

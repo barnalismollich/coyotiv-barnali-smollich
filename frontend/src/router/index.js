@@ -7,6 +7,7 @@ import PrivacyPolicy from '../views/privacy-policy.vue'
 import TermsOfUse from '../views/terms-of-use.vue'
 import CookiesPolicy from '../views/cookies-policy.vue'
 import Disclaimer from '../views/disclaimer.vue'
+import TestPage from '../views/test-page.vue'
 
 Vue.use(VueRouter)
 
@@ -75,6 +76,11 @@ export default function init(store) {
         path: '/disclaimer',
         name: 'disclaimer',
         component: Disclaimer,
+      },
+      {
+        path: '/test-page',
+        name: 'test-page',
+        component: TestPage,
       },
     ],
   })
