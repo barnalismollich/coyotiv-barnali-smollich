@@ -47,7 +47,7 @@ export default {
             button(type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide-to='2' aria-label='Slide 3')
           .carousel-inner
             .carousel-item.active
-              img.d-block.w-80(src="https://picsum.photos/id/102/300/200", alt="random-picture-for-layout")
+              img.d-block.w-100(src="https://picsum.photos/id/102/300/200", alt="random-picture-for-layout")
               .carousel-caption.d-none.d-sm-block
                 h5 Welcome
                 p If you are a family member, please login!
@@ -69,7 +69,7 @@ export default {
             span.visually-hidden Next
     br
     div(v-if="liveStreams.length")
-      h2 Do you want to speak to someone?
+    h2 Do you want to speak to someone?
       div(v-for="stream in liveStreams")
         p {{ stream }}
         button(@click="joinStream(stream)") Join stream
@@ -94,9 +94,9 @@ export default {
 <style scoped>
 .container {
   /* border: 1px solid #d0d0d0; */
-  padding: 12px;
+  padding: 6px;
   margin-bottom: 12px;
-  margin-top: 12px;
+  margin-top: 6px;
   margin-left: 12px;
   /* border-radius: 8px; */
 }

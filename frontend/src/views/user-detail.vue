@@ -55,11 +55,11 @@ export default {
 </template>
 
 <style lang="scss">
-// .about {
-//   margin-left: 40px;
-// }
-// .container {
-//   font-family: Avenir, Helvetica, Arial, sans-serif;
-//   color: rgb(15, 15, 15);
-// }
+.about {
+  margin-left: 40px;
+}
+.container {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  color: rgb(15, 15, 15);
+}
 </style>

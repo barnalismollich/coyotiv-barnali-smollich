@@ -59,6 +59,7 @@ const store = new Vuex.Store({
     async fetchSession({ commit }) {
       const user = await axios.get('/api/account/session')
       commit(mutations.SET_USER, user.data || null)
+      return user.data
     },
     async login({ commit }, credentials) {
       // eslint-disable-next-line no-useless-catch
