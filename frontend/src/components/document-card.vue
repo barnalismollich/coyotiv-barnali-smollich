@@ -24,7 +24,16 @@ export default {
   background-color: #f4eeee;
   color: rgb(15, 15, 15);
   margin-bottom: 24px;
-  margin-left: 12px;
+  margin-left: 0 2em;
   border-radius: 8px;
+}
+h3 {
+  font-size: 24px;
+}
+p {
+  font-size: 20px;
+}
+a.button.btn.btn-primary.link {
+  font-size: 20px;
 }
 </style>

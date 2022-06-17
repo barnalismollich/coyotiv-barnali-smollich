@@ -98,7 +98,8 @@ export default {
 .about {
   font-size: 12px;
   color: rgb(15, 15, 15);
-  margin: 10px;
+  margin: 0 3em;
+  margin-top: 100px;
 }
 h1 {
   font-size: 18px;
@@ -113,6 +114,9 @@ p {
   font-size: 12px;
 }
 strong {
+  font-size: 12px;
+}
+li {
   font-size: 12px;
 }
 </style>

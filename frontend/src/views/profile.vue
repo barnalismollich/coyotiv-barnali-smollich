@@ -34,70 +34,98 @@ export default {
 <template lang="pug">
   .home
     br
-    h1 Family Diary
-    //- p The time is: {{time}}
+    h1.text-center Welcome to our Family Diary
+        //- p The time is: {{time}}
     br
-    h2 What do you want to do?
-    .container
-      .box(style='width: 100%; height: 100%')
-        #carouselExampleCaptions.carousel.slide(data-bs-ride='carousel')
-          .carousel-indicators
-            button.active(type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
-            button(type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide-to='1' aria-label='Slide 2')
-            button(type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide-to='2' aria-label='Slide 3')
-          .carousel-inner
-            .carousel-item.active
-              img.d-block.w-100(src="https://picsum.photos/id/102/300/200", alt="random-picture-for-layout")
-              .carousel-caption.d-none.d-sm-block
-                h5 Welcome
-                p If you are a family member, please login!
-            .carousel-item
-              img.d-block.w-100(alt="random-picture-for-layout" width=50 src="https://picsum.photos/id/147/300/200")
-              .carousel-caption.d-none.d-md-block
-                h5 If you do not have a username and password please write to
-                p barnaliingermany@gmail.com
-            .carousel-item
-              img.d-block.w-100(alt="random-picture-for-layout" width=50 src="https://picsum.photos/id/198/300/200")
-              .carousel-caption.d-none.d-md-block
-                h5 Please be aware that only family members are allowed to sign in
-                p Thank you!
-          button.carousel-control-prev(type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide='prev')
-            span.carousel-control-prev-icon(aria-hidden='true')
-            span.visually-hidden Previous
-          button.carousel-control-next(type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide='next')
-            span.carousel-control-next-icon(aria-hidden='true')
-            span.visually-hidden Next
-    br
-    div(v-if="liveStreams.length")
-    h2 Do you want to speak to someone?
-      div(v-for="stream in liveStreams")
-        p {{ stream }}
-        button(@click="joinStream(stream)") Join stream
-    button(@click="goLive") Click here to chat
-    div(v-if="currentLiveStream")
-      h3 Live stream
-      .messages
-        .message(v-for="message in liveStreamMessages")
-          p
-            span {{ message.author }}:&nbsp;
-            span {{ message.body }}
-      form(@submit="sendMessage")
-        input(type="text" v-model="message")
-        input(type="submit" value="Send message")
-    br
-    h2 Who is already registered?
-    div(v-for="user in users")
-      router-link(:to="`/users/${user._id}`") {{ user.firstName }}
-    br
-</template>
+    .card-container
+      .row
+        .col-6
+            .card
+              img.card-img-top(src='https://picsum.photos/id/584/300/200' alt='random-picture-users')
+              .card-body
+                  h5.card-title If you are a family member click on your name to see your documents
+                  p.card-text
+                    div(v-for="user in users")
+                      router-link(:to="`/users/${user._id}`") {{ user.firstName }}
+              //- .card-body
+                  //- a.card-link(href='#') Card link
+                  router-link(:to="`/users/${user._id}`") {{ user.firstName }}.
+        .col-6
+            .card
+              img.card-img-top(src='https://picsum.photos/id/611/300/200' alt='Chat function')
+              .card-body
+                  h5.card-title Do you want to speak to someone?
+                  p.card-text
+                    div(v-if="liveStreams.length")
+                      div(v-for="stream in liveStreams")
+                        p {{ stream }}
+                        button(@click="joinStream(stream)") Join stream
+                    button(@click="goLive") Click here to chat
+                    div(v-if="currentLiveStream")
+                      h3 Live stream
+                      .messages
+                        .message(v-for="message in liveStreamMessages")
+                          p
+                            span {{ message.author }}:&nbsp;
+                            span {{ message.body }}
+                      form(@submit="sendMessage")
+                        input(type="text" v-model="message")
+                        input(type="submit" value="Send message")
+              //- .card-body
+              //-     a.card-link(href='#') Card link
+
+    //- div(v-if="liveStreams.length")
+    //- h2 Do you want to speak to someone?
+    //-   div(v-for="stream in liveStreams")
+    //-     p {{ stream }}
+    //-     button(@click="joinStream(stream)") Join stream
+    //- button(@click="goLive") Click here to chat
+    //- br
+    //- div(v-if="currentLiveStream")
+    //-   h3 Live stream
+    //-   .messages
+    //-     .message(v-for="message in liveStreamMessages")
+    //-       p
+    //-         span {{ message.author }}:&nbsp;
+    //-         span {{ message.body }}
+    //-   form(@submit="sendMessage")
+    //-     input(type="text" v-model="message")
+    //-     input(type="submit" value="Send message")
+    //- h2 Who is already registered?
+    //- div(v-for="user in users")
+    //-   router-link(:to="`/users/${user._id}`") {{ user.firstName }}
+    </template>
 
 <style scoped>
-.container {
+#home {
   /* border: 1px solid #d0d0d0; */
   padding: 6px;
-  margin-bottom: 12px;
-  margin-top: 6px;
-  margin-left: 12px;
-  /* border-radius: 8px; */
+  margin-bottom: 6px;
+  margin-top: 70px;
+  margin-left: 0 2em;
+}
+.card-body {
+  margin-bottom: 6px;
+  margin-top: 20px;
+  margin-left: 0 2em;
+}
+
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 26px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 22px;
+}
+h5 {
+  font-size: 22px;
+}
+p {
+  font-size: 22px;
 }
 </style>

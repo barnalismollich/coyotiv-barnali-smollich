@@ -26,10 +26,10 @@ export default {
         { name: 'Testament', description: 'Who gets what after your death' },
         {
           name: 'Personalausweis',
-          description: 'It is not allowed to store a copy of the passport but save the number',
+          description: 'Just save the number here',
         },
         { name: 'Bankvollmacht', description: 'Who has access to your bank accounts as a representative' },
-        { name: 'Other', description: 'Which other documents are important for you' },
+        { name: 'Other', description: 'Please upload here other important documents (optional)' },
       ],
     }
   },
@@ -45,7 +45,7 @@ export default {
     h1 Documents for emergency cases
       UserCard(:user="user" v-if="user")
     br
-    h2 Please click on the button to open the document
+    h2 Please click on the respective button to open the document
     br
     .container
       .row
@@ -56,10 +56,17 @@ export default {
 
 <style lang="scss">
 .about {
-  margin-left: 40px;
+  margin-left: 0 2em;
 }
 .container {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-size: 30px;
   color: rgb(15, 15, 15);
+}
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 26px;
 }
 </style>

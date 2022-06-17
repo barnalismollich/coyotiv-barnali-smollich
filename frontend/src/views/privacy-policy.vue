@@ -7,7 +7,7 @@ export default {
 <template lang="pug">
 .about
   h1 Privacy Policy
-    h2 Last updated: June 09, 2022
+    p Last updated: June 09, 2022
       p
         | This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
       p
@@ -242,9 +242,12 @@ export default {
 
 <style lang="scss">
 .about {
+  padding: 6px;
+  margin-bottom: 70px;
+  margin-top: 70px;
+  margin-left: 0 2em;
   font-size: 12px;
   color: rgb(15, 15, 15);
-  margin: 10px;
 }
 h1 {
   font-size: 18px;
@@ -259,6 +262,9 @@ p {
   font-size: 12px;
 }
 strong {
+  font-size: 12px;
+}
+li {
   font-size: 12px;
 }
 </style>

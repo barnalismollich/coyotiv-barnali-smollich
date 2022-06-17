@@ -38,12 +38,14 @@ services:
       - ./backend/test:/app/test
   mongo:
     image: mongo
+    container_name: mongo
     ports:
       - 27018:27017
     # volumes:
     # - ./data:/data
   load-balancer:
-    image: traefik:v2.2
+    image: traefik:v2.
+    container_name: load-balancer
     command:
       - "--api.insecure=true"
       - "--providers.docker=true"

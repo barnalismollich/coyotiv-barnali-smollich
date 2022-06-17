@@ -39,26 +39,60 @@ export default {
 
 <template lang="pug">
 .register
-    form( @submit="submitLogin")
-      h1 Create a new account
-      label(for="firstName") firstName:&nbsp;
-        input(v-model="firstName" id="firstName" type="text" placeholder="Your first name" required)
-      label(for="birthName") birthName:&nbsp;
-        input(v-model="birthName" id="birthName" type="text" placeholder="Your birth name" required)
-      label(for="lastName") lastName:&nbsp;
-        input(v-model="lastName" id="lastName" type="text" placeholder="Your last name" required)
-      label(for="email") Email:&nbsp;
-        input(v-model="email" id="email" type="email" placeholder="Your email" required)
-      label(for="password") Password:&nbsp;
-        input(v-model="password" id="password" type="password" placeholder="Your password" required)
-      input(type="submit" value="Register")
-    div(v-if="backendError") {{ backendError }}
-    div Already have an account? <router-link to="/login">Log in</router-link>
+    //- form( @submit="submitLogin")
+    //-   h1 Creating a new account is only possible by the admin as this is a private site
+    //-   label(for="firstName") firstName:&nbsp;
+    //-     input(v-model="firstName" id="firstName" type="text" placeholder="Your first name" required)
+    //-   label(for="birthName") birthName:&nbsp;
+    //-     input(v-model="birthName" id="birthName" type="text" placeholder="Your birth name" required)
+    //-   label(for="lastName") lastName:&nbsp;
+    //-     input(v-model="lastName" id="lastName" type="text" placeholder="Your last name" required)
+    //-   label(for="email") Email:&nbsp;
+    //-     input(v-model="email" id="email" type="email" placeholder="Your email" required)
+    //-   label(for="password") Password:&nbsp;
+    //-     input(v-model="password" id="password" type="password" placeholder="Your password" required)
+    //-   input(type="submit" value="Register")
+    //- div(v-if="backendError") {{ backendError }}
+    //- div Already have an account? <router-link to="/login">Log in</router-link>
+
+    body.text-left
+      main.form-signin
+        form(@submit="submitLogin")
+          h1.h3.mb-3.fw-normal Creating a new account is only possible by the admin as this is a private site
+          .form-floating
+            input#floatingInput.form-control(v-model="firstName" type="text" placeholder="Your first name" required)
+            label(for="firstName") firstName&nbsp;
+          .form-floating
+            input#floatingInput.form-control(v-model="birthName" type="text" placeholder="Your birth name" required)
+            label(for="birthName") birthName&nbsp;
+          .form-floating
+            input#floatingInput.form-control(v-model="lastName" type="text" placeholder="Your last name" required)
+            label(for="lastName") lastName&nbsp;
+          .form-floating
+            input#floatingInput.form-control(v-model="email" type='email' placeholder='name@example.com' required)
+            label(for='floatingEmail') Email&nbsp;
+          .form-floating
+            input#floatingPassword.form-control(v-model="password" type='password' placeholder='Password' required)
+            label(for='floatingPassword') Password&nbsp;
+          .checkbox.mb-3
+            label
+              input(type='checkbox' value='remember-me')
+              |  Remember me
+          button.btn.btn-lg.btn-primary(type='submit' value="Register") Register
+          div(v-if="backendError") {{ backendError }}
+          div Already have an account? <router-link to="/login">Log in</router-link>
 </template>
 
 <style lang="scss" scoped>
 label {
   display: block;
   margin: 1rem 0;
+}
+.register {
+  margin-top: 18px;
+}
+form {
+  margin: 1rem;
+  width: 50rem;
 }
 </style>

@@ -29,13 +29,12 @@ export default {
     //-   router-link(to="/register") Register
     //-   a(@click="doLogout" href="#") Logout
 
-
-    nav#nav.navbar.navbar-expand-lg.bg-light
+    nav#nav.navbar.fixed-top.navbar-expand-lg.bg-light
       .container-fluid
         button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarTogglerDemo01', aria-controls='navbarTogglerDemo01', aria-expanded='false', aria-label='Toggle navigation')
           span.navbar-toggler-icon
         #navbarTogglerDemo01.collapse.navbar-collapse
-          router-link.navbar-brand(to='/') FamilyDiary
+          router-link.navbar-brand(src='/logo_familydiary.jpg' alt='family diary logo' to='/') FamilyDiary
           ul.navbar-nav.me-auto.mb-2.mb-lg-0
             li.nav-item
               router-link.nav-link(v-if="user" to="/profile") Profile
@@ -46,9 +45,7 @@ export default {
               router-link.nav-link(v-if="!user" to="/register") Register
             li.nav-item
               a.nav-link(v-if="user" @click="doLogout" href="#") Logout
-
-
-    footer#nav.navbar.fixed-bottom.navbar-expand-lg.bg-light
+    nav#nav.navbar.fixed-bottom.navbar-expand-lg.bg-light
       .container-fluid
         button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarTogglerDemo01', aria-controls='navbarTogglerDemo01', aria-expanded='false', aria-label='Toggle navigation')
           span.navbar-toggler-icon
@@ -64,8 +61,6 @@ export default {
               router-link.nav-link(to="/cookies-policy") Cookies Policy
             li.nav-item
               router-link.nav-link(to="/disclaimer") Disclaimer
-            li.nav-item
-            router-link.nav-link(to="/test-page") Test page
 
     router-view
 
@@ -80,29 +75,32 @@ export default {
 <style lang="scss">
 #app {
   margin: 0 2rem;
-  margin-left: 12px;
-  margin-top: 10px;
+  margin-top: 70px;
+  margin-bottom: 70px;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: rgb(15, 15, 15);
-  //background-color: #141a19bc;
+  .nav-link {
+    font-size: 16px;
+  }
+
   // .filled-out-documents-title {
   //   color: green;
   //   margin-bottom: 24px;
   // }
 }
 #nav {
-  padding: 18px;
+  padding: 16px;
+  margin: 0 2rem;
 }
 
 a {
   font-weight: bold;
   color: rgb(15, 15, 15);
-  // margin: 0 1rem;
 
   &.router-link-exact-active {
-    color: #42b983;
+    color: #0518a9;
   }
 }
 </style>

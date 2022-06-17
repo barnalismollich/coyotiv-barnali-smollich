@@ -148,4 +148,7 @@ p {
 strong {
   font-size: 12px;
 }
+li {
+  font-size: 12px;
+}
 </style>
