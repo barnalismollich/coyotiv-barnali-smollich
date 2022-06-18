@@ -2,7 +2,17 @@
 .card-container
   h3 {{ name }}
   p {{ description }}
-  a.button.btn.btn-primary.link(href='/') Open document
+  form(action='/api/download', method='GET')
+    input(type='hidden' name='name' :value='name')
+    input(type='hidden' name='firstName' :value='firstName')
+    input(type='submit', value='Download')
+  //- a.button.btn.btn-primary.link(href="/api/download?file=" + firstName + '-' + name + '.pdf') Open document
+  form(action='/api/upload', method='POST', enctype='multipart/form-data')
+    p
+      input(type='file', name='file' value='Select document', accept='application/pdf')
+      input(type='submit', value='Upload')
+      input(type='hidden' name='name' :value='name')
+      input(type='hidden' name='user' :value='firstName')
   //- a.card-container.link(href="/") Go to document
 </template>
 
@@ -12,6 +22,7 @@ export default {
   props: {
     name: String,
     description: String,
+    firstName: String,
   },
 }
 </script>

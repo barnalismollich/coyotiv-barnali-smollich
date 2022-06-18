@@ -7,8 +7,4 @@ block content
       p Welcome to #{title}
       #promo
         .promo-title FamilyDiary - a project created by Barnali Smollich
-
-        form(action="/api/upload" method='post', enctype='multipart/form-data')
-          label(for="document") Upload a document
-          input#document(type='file', name='anna_is_sleepy')
-          input(type='submit', name='uploadDocument', value='Upload Document')
+      a.href(href='/') Back to index

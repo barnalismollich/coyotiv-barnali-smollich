@@ -16,6 +16,7 @@ services:
     volumes:
       - ./frontend/src:/app/src
       - ./frontend/public:/app/public
+      # - ./upload:/app/upload
   backend:
     image: backend
     build:
@@ -36,16 +37,17 @@ services:
     volumes:
       - ./backend/src:/app/src
       - ./backend/test:/app/test
+      - ./upload:/app/upload
   mongo:
     image: mongo
-    container_name: mongo
+    # container_name: mongo
     ports:
       - 27018:27017
     # volumes:
     # - ./data:/data
   load-balancer:
     image: traefik:v2.2
-    container-name: load-balancer
+    # container-name: load-balancer
     command:
       - "--api.insecure=true"
       - "--providers.docker=true"

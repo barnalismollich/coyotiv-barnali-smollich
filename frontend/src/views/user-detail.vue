@@ -7,6 +7,7 @@ import { mapActions } from 'vuex'
 export default {
   name: 'UserDetail',
   components: { UserCard },
+  props: ['user'],
   data() {
     return {
       user: null,
@@ -21,14 +22,23 @@ export default {
   data() {
     return {
       documents: [
-        { name: 'Patientenverfuegung', description: 'What should happen if you cannot express your will' },
-        { name: 'Betreuungsvollmacht', description: 'Who is allowed to handle the administrative work' },
+        {
+          name: 'Patientenverfuegung',
+          description: 'What should happen if you cannot express your will',
+        },
+        {
+          name: 'Betreuungsvollmacht',
+          description: 'Who is allowed to handle the administrative work',
+        },
         { name: 'Testament', description: 'Who gets what after your death' },
         {
           name: 'Personalausweis',
           description: 'Just save the number here',
         },
-        { name: 'Bankvollmacht', description: 'Who has access to your bank accounts as a representative' },
+        {
+          name: 'Bankvollmacht',
+          description: 'Who has access to your bank accounts as a representative',
+        },
         { name: 'Other', description: 'Please upload here other important documents (optional)' },
       ],
     }
@@ -42,15 +52,15 @@ export default {
 <template lang="pug">
   .about
     br
-    h1 Documents for emergency cases
+    h1.text-center Documents for emergency cases
       UserCard(:user="user" v-if="user")
     br
-    h2 Please click on the respective button to open the document
+    h2.text-center Please click on the respective button to upload or open a document
     br
     .container
       .row
         .col-24.col-lg-12.col-xl-6(v-for="document in documents")
-          DocumentCard(:name="document.name" :description="document.description")
+          DocumentCard(:name="document.name" :description="document.description" :firstName="user.firstName")
     //- Counter
 </template>
 
