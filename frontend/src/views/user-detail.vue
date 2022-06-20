@@ -52,7 +52,7 @@ export default {
 <template lang="pug">
   .about
     br
-    h1.text-center Documents for emergency cases
+    h1.text-center Documents for emergency cases for {{ user.firstName}}
       UserCard(:user="user" v-if="user")
     br
     h2.text-center Please click on the respective button to upload or open a document
@@ -70,13 +70,13 @@ export default {
 }
 .container {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   color: rgb(15, 15, 15);
 }
 h1 {
   font-size: 30px;
 }
 h2 {
-  font-size: 26px;
+  font-size: 20px;
 }
 </style>

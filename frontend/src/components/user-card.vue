@@ -19,10 +19,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-// .box {
-//   padding: 2rem;
-//   border: 1px solid #c80;
-//   background: #dd0;
-//   border-radius: 0.3rem;
-// }
+.box {
+  padding: 2rem;
+  border: 1px solid #c80;
+  background: #dd0;
+  border-radius: 0.3rem;
+}
 </style>

@@ -29,12 +29,18 @@ export default {
     //-   router-link(to="/register") Register
     //-   a(@click="doLogout" href="#") Logout
 
+
+    #logo
+      img(scr="C:\Users\Barnali\Documents\Coyotiv\family-icon-vector.png" alt="logo for family diary")
+
     nav#nav.navbar.fixed-top.navbar-expand-lg.bg-light
       .container-fluid
         button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarTogglerDemo01', aria-controls='navbarTogglerDemo01', aria-expanded='false', aria-label='Toggle navigation')
           span.navbar-toggler-icon
         #navbarTogglerDemo01.collapse.navbar-collapse
-          router-link.navbar-brand(src='/logo_familydiary.jpg' alt='family diary logo' to='/') FamilyDiary
+          router-link.navbar-brand(scr="https://picsum.photos/id/584/300/200" alt="logo for family diary" to='/') FamilyDiary
+          .site-logo
+            img(scr="https://picsum.photos/id/584/300/200" alt="logo for family diary" to='/')
           ul.navbar-nav.me-auto.mb-2.mb-lg-0
             li.nav-item
               router-link.nav-link(v-if="user" to="/profile") Profile
@@ -83,6 +89,10 @@ export default {
   color: rgb(15, 15, 15);
   .nav-link {
     font-size: 16px;
+    .site-logo {
+      width: 50px;
+      height: 50px;
+    }
   }
 
   // .filled-out-documents-title {
