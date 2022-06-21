@@ -30,8 +30,8 @@ export default {
     //-   a(@click="doLogout" href="#") Logout
 
 
-    #logo
-      img(scr="C:\Users\Barnali\Documents\Coyotiv\family-icon-vector.png" alt="logo for family diary")
+    //- #logo
+    //-   img(scr="\\wsl.localhost\Ubuntu\home\barnali\dev\coyotiv\barnali\coyotiv-barnali-smollich\frontend\public\img\icons" alt="logo for family diary")
 
     nav#nav.navbar.fixed-top.navbar-expand-lg.bg-light
       .container-fluid

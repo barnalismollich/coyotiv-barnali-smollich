@@ -94,7 +94,7 @@ export default {
     //- h2 Who is already registered?
     //- div(v-for="user in users")
     //-   router-link(:to="`/users/${user._id}`") {{ user.firstName }}
-    </template>
+  </template>
 
 <style scoped>
 #home {
