@@ -37,7 +37,7 @@ export default {
     h1.text-center Welcome to our Family Diary
         //- p The time is: {{time}}
     br
-    .card-container
+    .container
       .row
         .col-6
             .card
@@ -52,7 +52,7 @@ export default {
                   router-link(:to="`/users/${user._id}`") {{ user.firstName }}.
         .col-6
             .card
-              img.card-img-top(src='https://picsum.photos/id/611/300/200' alt='Chat function')
+              img.card-img-top(src='https://picsum.photos/id/1037/300/200' alt='Chat function')
               .card-body
                   h5.card-title Do you want to speak to someone?
                   p.card-text
@@ -97,7 +97,7 @@ export default {
   </template>
 
 <style scoped>
-#home {
+.home {
   /* border: 1px solid #d0d0d0; */
   padding: 6px;
   margin-bottom: 6px;
