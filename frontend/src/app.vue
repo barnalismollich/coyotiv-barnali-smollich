@@ -29,15 +29,7 @@ export default {
 
 <template lang="pug">
   #app
-    //- #nav
-    //-   router-link(to="/profile") Profile
-    //-   router-link(to="/login") Login
-    //-   router-link(to="/register") Register
-    //-   a(@click="doLogout" href="#") Logout
 
-
-    //- #logo
-    //-   img(src="\\wsl.localhost\Ubuntu\home\barnali\dev\coyotiv\barnali\coyotiv-barnali-smollich\frontend\public\img\icons" alt="logo for family diary")
 
     nav#nav.navbar.fixed-top.navbar-expand-lg.bg-light
       .container-fluid
@@ -75,11 +67,6 @@ export default {
 
     router-view
 
-    //- h2.filled-out-documents-title Filled out documents
-    //- .container
-    //-   .row
-    //-     .col-12.col-lg-6.col-xl-4(v-for="document in documents")
-    //-       DocumentCard(:name="document.name" :description="document.description")
 
 </template>
 
