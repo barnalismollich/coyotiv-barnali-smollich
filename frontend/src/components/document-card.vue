@@ -7,17 +7,44 @@ export default {
     firstName: String,
   },
 }
+var getJSON = function (url, callback) {
+  var xhr = new XMLHttpRequest()
+  xhr.open('GET', url, true)
+  xhr.responseType = 'json'
+  xhr.onload = function () {
+    var status = xhr.status
+    if (status === 200) {
+      callback(null, xhr.response)
+    } else {
+      callback(status, xhr.response)
+    }
+  }
+  xhr.send()
+}
+var exists = function (name, firstName) {
+  getJSON(
+    'http://coyotiv-barnali-smollich.localhost/api/exists?name=' + name + '&firstName=' + firstName,
+    function (err, data) {
+      if (err !== null) {
+        alert('Something went wrong: ' + err)
+      } else {
+        return data.exists
+      }
+    }
+  )
+}
 </script>
 
 <template lang="pug">
 .card-container
   h3 {{ name }}
   p {{ description }}
-  form(action='/api/download', method='GET')
+  form(action='/api/download', method='GET' id="downloadForm")
     input(type='hidden' name='name' :value='name')
     input(type='hidden' name='firstName' :value='firstName')
-    input(type='submit', value='Download')
-  //- a.button.btn.btn-primary.link(href="/api/download?file=" + firstName + '-' + name + '.pdf') Open document The button code from bootstrap does not function, therefore a form was implemented.
+    input(type='submit', value='Download' id='downloadButton')
+  //- - var linka = "/api/download?file={{firstName}}-{{name}}.pdf"
+  //- a.button.btn.btn-primary.link(href="#{linka}") Download
   form(action='/api/upload', method='POST', enctype='multipart/form-data')
     p
       input(type='file', name='file' value='Select document', accept='application/pdf')

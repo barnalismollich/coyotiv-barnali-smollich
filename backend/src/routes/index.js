@@ -45,6 +45,14 @@ router.get('/download', function (req, res, next) {
   res.download('/app/upload/' + req.query.firstName + '-' + req.query.name + '.pdf')
 })
 
+router.get('/exists', function (req, res, next) {
+  console.log('check if file exists')
+  fs.access('/app/upload/' + req.query.firstName + '-' + req.query.name + '.pdf', fs.constants.F_OK, err => {
+    if (err) res.json({ exists: false })
+    else res.json({ exists: true })
+  })
+})
+
 //
 //    The name, 'anna_is_sleepy' in this case, HAS to match the one in the
 //    pug file!
