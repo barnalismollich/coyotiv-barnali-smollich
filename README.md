@@ -4,7 +4,7 @@ In the Github (main branch) called barnalismollich/coyotiv-barnali-smollich you 
 
 # **Project idea**
 
-My project called "Family Diary" had the intention to be a website which should function as a  storage of our most important documents. Only family members (husband, all children and me) should have access to this page. Starting point should be a login page as the contents is sensitive. The main page is a list of our most important documents (testament, living will, power of attorney, passport number, vaccination certicate and so on) which in case of emergency can be accessed easily.
+My project called "Family Diary" has the intention to be a website which should function as a  storage of our most important documents. Only family members (husband, all children and me) should have access to this page. Starting point should be a login page as the contents is sensitive. The main page is a list of our most important documents (testament, living will, power of attorney, passport number, vaccination certicate and so on) which in case of emergency can be accessed fast and easily.
 
 # **Goal**
 
@@ -12,7 +12,7 @@ Store the most important documents in the application i.e. upload and download o
 
 # **Non-Goals**
 
-1. Information only for family and not for the public.
+1. Information only for family and not for the public (thus login and logout functions are mandatory).
 2. No todo or shopping list.
 3. Form follows function, i.e. the website contains mandatory stuff (Privacy Policy, Terms of use) but is not a fancy website.
 4. Only storage of documents. No storage of photos, videos and audios in the first version.
