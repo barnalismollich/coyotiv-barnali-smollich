@@ -2,7 +2,7 @@
 
 start
 
-:Select file from FamilyDiary;
+:Select file from Family Diary;
 :Download file;
 :Store file offline;
 
