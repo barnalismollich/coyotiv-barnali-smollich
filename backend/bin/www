@@ -3,7 +3,7 @@
 /* eslint-disable */
 
 /**
- * Module dependencies.
+ * Module dependencies are listed here
  */
 
 const app = require('../src/app')
