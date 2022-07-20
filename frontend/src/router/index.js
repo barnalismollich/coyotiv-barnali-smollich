@@ -26,6 +26,7 @@ export default function init(store) {
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
+        // if a view shall be shown and is added in the views folder it has to be referenced here as well.
 
         component: () => import(/* webpackChunkName: "about" */ '../views/user-detail.vue'),
       },
