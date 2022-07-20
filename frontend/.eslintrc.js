@@ -7,6 +7,7 @@ module.exports = {
   // parserOptions: {
   //   parser: '@babel/eslint-parser',
   // },
+  // babel causes too many errors therefore it is deactivated
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
