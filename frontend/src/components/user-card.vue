@@ -7,6 +7,7 @@ export default {
   //     defaultDocument: 'This user has no documents.',
   //   }
   // },
+  // This file is necessary to create the user page.
 }
 </script>
 
@@ -21,8 +22,8 @@ export default {
 <style lang="scss" scoped>
 .box {
   padding: 2rem;
-  border: 1px solid #c80;
-  background: #dd0;
+  border: 1px solid rgb(75, 75, 75);
+  background: rgb(35, 35, 35);
   border-radius: 0.3rem;
 }
 </style>
