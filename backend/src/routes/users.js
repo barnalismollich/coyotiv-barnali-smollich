@@ -32,7 +32,7 @@ router.get('/', async (req, res) => {
   res.send(await User.find(query))
 })
 
-/* POST create a user */
+/* POST create a user but without a password. That will be done with another program */
 router.post('/', async (req, res) => {
   const userToCreate = {
     firstName: req.body.firstName,
