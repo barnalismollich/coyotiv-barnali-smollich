@@ -26,10 +26,8 @@ const storage = multer.diskStorage({
   // },
 })
 //
-//    For now, store them in the backend container.
-//
-//    It will create the folder you define here auto-magically.
-//
+//    For now, store them in the backend container. It will create the folder you define here auto-magically.
+// It just does not show the document in the frontend.
 // const upload = multer({ dest: 'upload/' })
 const upload = multer({ storage: storage })
 
