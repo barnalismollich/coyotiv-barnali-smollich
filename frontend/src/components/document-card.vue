@@ -21,6 +21,8 @@ var getJSON = function (url, callback) {
   }
   xhr.send()
 }
+//This file is necessary to display the documents in a so called card container
+
 var exists = function (name, firstName) {
   getJSON(
     'http://coyotiv-barnali-smollich.localhost/api/exists?name=' + name + '&firstName=' + firstName,
