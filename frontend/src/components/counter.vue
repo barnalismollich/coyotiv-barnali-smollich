@@ -14,7 +14,7 @@
 //     ...mapState(['count']),
 //   },
 // }
-//
+// This file is not needed for my project as I do not count the visitors
 </script>
 
 //
