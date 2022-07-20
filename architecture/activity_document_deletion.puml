@@ -2,7 +2,7 @@
 
 start
 
-:Select file;
+:Select file or document;
 :Confirm deletion;
 :Delete document;
 
