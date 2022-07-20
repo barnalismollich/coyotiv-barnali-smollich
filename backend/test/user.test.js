@@ -26,3 +26,6 @@ describe('Users endpoints', () => {
     expect(usersExist).toBe(true)
   })
 })
+
+/* These tests are to see if the users are created correctly
+ */
