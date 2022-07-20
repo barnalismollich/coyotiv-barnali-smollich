@@ -1,7 +1,7 @@
 {
   "name": "coyotiv-barnali-smollich",
-  "version": "1.0.0",
-  "description": "Hello! This is my folder for my project I did during the training at Coyotiv UG.",
+  "version": "1.0.2",
+  "description": "This is my folder for the project called Family Diary I did during the training at Coyotiv UG.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
