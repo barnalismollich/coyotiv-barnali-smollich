@@ -23,23 +23,23 @@ export default {
     return {
       documents: [
         {
-          name: 'Patientenverfuegung',
+          name: 'Living Will',
           description: 'What should happen if you cannot express your will',
         },
         {
-          name: 'Betreuungsvollmacht',
+          name: 'Power of Attorney',
           description: 'Who is allowed to handle the administrative work',
         },
         { name: 'Testament', description: 'Who gets what after your death' },
         {
-          name: 'Personalausweis',
+          name: 'Passport Number',
           description: 'Just save the number here',
         },
         {
-          name: 'Bankvollmacht',
+          name: 'Power of Attorney for the bank',
           description: 'Who has access to your bank accounts as a representative',
         },
-        { name: 'Other', description: 'Please upload here other important documents (optional)' },
+        { name: 'Other', description: 'Please upload here other important documents if required' },
       ],
     }
   },
