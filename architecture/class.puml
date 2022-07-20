@@ -10,7 +10,7 @@ class FamilyMember {
     EMail: string
     documents: [Document]
 
-    constructor( {Surname: string, Birthname: string, FirstName: string, E-Mail, string } =)
+    constructor( {firstName: string, birthName: string, lastName: string, email: string } =)
       addDocument(document: Document)
 }
 
@@ -19,7 +19,7 @@ filename: string
 constructor(filename: string)
 }
 
-FamilyMember "1" ---->"0..*" Document: uploads, keeps, deletes
+FamilyMember "1" ---->"0..*" Document: uploads, stores, deletes
 Document ----> "0..* " FamilyMember: is downloaded
 
 @enduml
