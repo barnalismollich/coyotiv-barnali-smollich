@@ -1,7 +1,7 @@
 <script>
 import { mapActions, mapState } from 'vuex'
-// @import '@/assets/theme.scss';
-// @import 'bootstrap/scss/bootstrap.scss';
+// @import '@/assets/theme.scss'; not needed for my project, it works without.
+// @import 'bootstrap/scss/bootstrap.scss'; not needed in my project as it works without this import.
 
 export default {
   name: 'App',
