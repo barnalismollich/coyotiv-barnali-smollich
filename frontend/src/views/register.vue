@@ -59,28 +59,28 @@ export default {
       main.form-signin
         form(@submit="submitLogin")
           h1.h3.mb-3.fw-normal Creating a new account is only possible by the admin as this is a private site
-          .form-floating
+          label(for="firstName") Enter your first name&nbsp;
             input#floatingInput.form-control(v-model="firstName" type="text" placeholder="Your first name" required)
-            label(for="firstName") firstName&nbsp;
-          .form-floating
+
+          label(for="birthName") Enter your birth name&nbsp;
             input#floatingInput.form-control(v-model="birthName" type="text" placeholder="Your birth name" required)
-            label(for="birthName") birthName&nbsp;
-          .form-floating
+
+          label(for="lastName") Enter your last name&nbsp;
             input#floatingInput.form-control(v-model="lastName" type="text" placeholder="Your last name" required)
-            label(for="lastName") lastName&nbsp;
-          .form-floating
+
+          label(for='floatingEmail') Enter your e-mail&nbsp;
             input#floatingInput.form-control(v-model="email" type='email' placeholder='name@example.com' required)
-            label(for='floatingEmail') Email&nbsp;
-          .form-floating
+
+          label(for='floatingPassword') Create a password&nbsp;
             input#floatingPassword.form-control(v-model="password" type='password' placeholder='Password' required)
-            label(for='floatingPassword') Password&nbsp;
+
           .checkbox.mb-3
             label
               input(type='checkbox' value='remember-me')
               |  Remember me
           button.btn.btn-lg.btn-primary(type='submit' value="Register") Register
           div(v-if="backendError") {{ backendError }}
-          div Already have an account? <router-link to="/login">Log in</router-link>
+          div Already have an account? <router-link to="/login">Login</router-link>
 </template>
 
 <style lang="scss" scoped>
