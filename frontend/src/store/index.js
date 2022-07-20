@@ -102,6 +102,8 @@ const store = new Vuex.Store({
   modules: {},
 })
 
+// This file is amongst others important for the real time communication with socket.io
+
 socket.on('new live stream', user => {
   store.dispatch('addLiveStream', user)
 })
