@@ -24,6 +24,8 @@ router.post('/session', passport.authenticate('local', { failWithError: true }),
   res.send(req.user)
 })
 
+// This creates the user with the required fields
+
 router.delete('/session', async (req, res, next) => {
   await req.logout()
 
