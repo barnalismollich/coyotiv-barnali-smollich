@@ -22,7 +22,7 @@ usecase "Logout" as UC6
 
 package "User Administration"{
 usecase "Register new user" as UC7
-usecase "Delete user" as UC8
+usecase "Delete user in DB" as UC8
 }
 
 user --> UC1
