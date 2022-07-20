@@ -75,7 +75,7 @@ export default {
         li
           p Email address
         li
-          p First name and last name
+          p First name and last name and birth name
         li
           p Usage Data
       h3 Usage Data
