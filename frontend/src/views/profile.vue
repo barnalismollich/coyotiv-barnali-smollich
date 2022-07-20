@@ -41,7 +41,7 @@ export default {
       .row
         .col-6
             .card
-              img.card-img-top(src='https://picsum.photos/id/584/300/200' alt='random-picture-users')
+              img.card-img-top(src='https://picsum.photos/id/584/300/200' alt='picture to list all users')
               .card-body
                   h5.card-title If you are a family member click on your name to see your documents
                   p.card-text
@@ -52,9 +52,9 @@ export default {
                   router-link(:to="`/users/${user._id}`") {{ user.firstName }}.
         .col-6
             .card
-              img.card-img-top(src='https://picsum.photos/id/1037/300/200' alt='Chat function')
+              img.card-img-top(src='https://picsum.photos/id/1037/300/200' alt='picture for chat function')
               .card-body
-                  h5.card-title Do you want to speak to someone?
+                  h5.card-title Do you want to chat with someone?
                   p.card-text
                     div(v-if="liveStreams.length")
                       div(v-for="stream in liveStreams")
@@ -98,7 +98,6 @@ export default {
 
 <style scoped>
 .home {
-  /* border: 1px solid #d0d0d0; */
   padding: 6px;
   margin-bottom: 6px;
   margin-top: 70px;
