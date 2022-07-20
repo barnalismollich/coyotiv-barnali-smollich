@@ -4,7 +4,7 @@ start
 
 :Select file;
 :Upload file;
-:Store file;
+:Store file as a document;
 
 stop
 
