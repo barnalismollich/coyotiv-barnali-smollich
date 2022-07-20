@@ -75,7 +75,7 @@ export default {
     h1 Contact Us
     p If you have any questions about this Disclaimer, You can contact Us:
     ul
-      li By email: barnaliingermany@gmail.com
+      li By email: barnaliingermany@gmail.com (Barnali Smollich)
 
 </template>
 
