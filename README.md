@@ -1,6 +1,6 @@
 # **Family Diary**
 
-In the Github (main branch) called barnalismollich/coyotiv-barnali-smollich you can find my project work I did during the software engineering training at Coyotiv UG in March - June 2022.
+In the main branch in Github of barnalismollich/coyotiv-barnali-smollich you can find my project work I did during the software engineering training at Coyotiv UG in March - June 2022.
 
 # **Project idea**
 
@@ -21,13 +21,13 @@ Store the most important documents in the application i.e. upload and download o
 
 # **References and Sources**
 
-Evernote, Penzu, Jimdo and Wix templates, balsamiq tutorial Armagan Amcalar, Google drive / Amazon drive
+Evernote, Penzu, Jimdo and Wix templates, tutorials at Coyotiv UG e.g. balsamiq, Google drive, Amazon drive
 
 # **Technologies**
 
 Frontend: Vue.js, Vuex, HTML, CSS, JavaScript, balsamiq
 
-Backend: MongoDB Atlas, Docker, Google Cloud Run, socket.io
+Backend: MongoDB Atlas, Docker, Google Cloud Run, socket.io, node
 
 # **Installation**
 
