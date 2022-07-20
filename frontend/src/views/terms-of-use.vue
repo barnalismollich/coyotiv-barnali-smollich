@@ -122,7 +122,7 @@ export default {
     h1 Contact Us
     p If you have any questions about these Terms and Conditions, You can contact us:
     ul
-      li By email: barnaliingermany@gmail.com
+      li By email: barnaliingermany@gmail.com (Barnali Smollich)
 
 
 </template>
