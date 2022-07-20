@@ -1,4 +1,4 @@
-name: "PR Backend" # create a yml for frontend tests if frontend tests have been set up
+name: "PR Backend" # Create a yml for tests if these tests have been set up
 
 on:
   pull_request:
