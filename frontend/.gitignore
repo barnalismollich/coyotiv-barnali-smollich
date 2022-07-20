@@ -1,4 +1,4 @@
-# Logs
+# Logs. All the following shall not be pushed to Git.
 logs
 *.log
 npm-debug.log*
