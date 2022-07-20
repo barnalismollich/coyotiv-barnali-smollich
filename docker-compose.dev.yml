@@ -47,7 +47,7 @@ services:
     # - ./data:/data
   load-balancer:
     image: traefik:v2.2
-    # container_name: load-balancer
+    # container_name: load-balancer: If the container name is included it does not work anymore.
     command:
       - "--api.insecure=true"
       - "--providers.docker=true"
