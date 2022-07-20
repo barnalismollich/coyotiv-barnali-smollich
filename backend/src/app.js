@@ -85,6 +85,8 @@ passport.use(User.createStrategy())
 passport.serializeUser(User.serializeUser())
 passport.deserializeUser(User.deserializeUser())
 
+// The program passport is important to initialize a session
+
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/api', (req, res, next) => {
@@ -119,21 +121,11 @@ app.use(function (err, req, res, next) {
   })
 })
 
-// app.post('/upload_files', upload.array('files'), uploadFiles)
-// function uploadFiles(req, res) {
-//   console.log(req.body)
-//   console.log(req.files)
-//   res.json({ message: 'Successfully uploaded files' })
-// }
-// app.listen(8080, () => {
-//   console.log(`Server started...`)
-// })
-
 app.post('/api/profile', upload.single('document'), function (req, res, next) {
   // req.file is the `document` file
   // req.body will hold the text fields, if there were any
 })
 
-console.log('I am alive!')
+console.log('Database functions!')
 
 module.exports = app
