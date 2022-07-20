@@ -15,5 +15,5 @@ async function main() {
     render: h => h(App),
   }).$mount('#app')
 }
-
+// file important to run the application
 main()
