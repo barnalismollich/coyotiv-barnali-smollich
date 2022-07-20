@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+/* Automatic messages if app runs or not */
 
 import { register } from 'register-service-worker'
 
