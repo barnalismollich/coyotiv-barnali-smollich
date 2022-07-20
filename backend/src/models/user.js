@@ -34,6 +34,8 @@ const userSchema = new mongoose.Schema({
   },
 })
 
+// this model tells the database which fields are relevant for the database
+
 class User {
   async addDocument(document) {
     this.documents.push(document)
