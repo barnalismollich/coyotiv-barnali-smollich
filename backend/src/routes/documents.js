@@ -14,4 +14,6 @@ router.post('/', async (req, res) => {
   res.send(createdDocument)
 })
 
+// this creates the document with the POST command
+
 module.exports = router
