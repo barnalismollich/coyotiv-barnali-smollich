@@ -11,7 +11,7 @@ activate A
 A -> B: Download document
 activate B
 
-B -> C: Document/file is stored on device
+B -> C: Document is stored on device
 activate C
 
 C--> B: Document is downloaded

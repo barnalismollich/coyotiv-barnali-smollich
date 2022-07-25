@@ -8,7 +8,7 @@ participant "FileStorageEngine" as B
 FamilyMember -> A: Wants to delete document
 activate A
 
-A--> B: Confirms deletion
+A--> B: Confirms deletion of the document
 
 B--> A: Document is deleted
 

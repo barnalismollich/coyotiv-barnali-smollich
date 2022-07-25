@@ -52,7 +52,7 @@ export default {
           button.btn.btn-lg.btn-primary(type='submit' value="Log in") Log in
           div(v-if="backendError") {{ backendError }}
           br
-          div Don't have an account yet? Ask for an account by writing to barnaliingermany@gmail.com
+          div Are you a family member and you want to have an account? Write to barnaliingermany@gmail.com
           //-  <router-link to="/register"> TEXT </router-link> only needed if I want the users to log in but I do want that
 
 

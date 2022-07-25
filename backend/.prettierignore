@@ -9,3 +9,4 @@ orig/
 tmp/
 package-lock.json
 public/
+# This is the file for prettier ignore

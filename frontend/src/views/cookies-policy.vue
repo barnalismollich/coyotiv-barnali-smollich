@@ -6,7 +6,7 @@ export default {
 
 <template lang="pug">
 .about
-    h1 Cookies Policy
+    h1 Cookies Policy for Family Diary
     p Last updated: June 09, 2022
     p
       | This Cookies Policy explains what Cookies are and how We use them. You should read this policy so You can understand what type of cookies We use, or the information We collect using Cookies and how that information is used. This Cookies Policy has been created with the help of the
@@ -90,9 +90,11 @@ export default {
     h2 Contact Us
     p If you have any questions about this Cookies Policy, You can contact us:
     ul
-      li By email: barnaliingermany@gmail.com
+      li By email: barnaliingermany@gmail.com (Barnali Smollich)
 
 </template>
+
+
 
 <style lang="scss">
 .about {
