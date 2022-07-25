@@ -46,6 +46,8 @@ Open the project in your coding environment and install the dependencies with th
 
 # **Access the stack from the browser**
 
+![logo_familydiary](https://user-images.githubusercontent.com/102354821/180817016-34616265-c500-41c4-ab6e-937220d9c799.jpg)
+
 Open up your /etc/hosts file.
 
 In UNIX and VSCode, it can be opened via the following
