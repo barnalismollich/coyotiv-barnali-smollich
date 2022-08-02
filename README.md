@@ -48,6 +48,10 @@ A cookies policy, terms of use and disclaimer were also created but in order to 
 Backend:
 ![Backend](https://user-images.githubusercontent.com/102354821/182457416-38b278ea-3727-4a0a-b7a9-7a0dbeffac87.jpg)
 
+For tracking my todos I had used Kanban boards in Notion and Trello. Here is one screenshot (does not show all todos, it is just to give an impression):
+
+![Trello](https://user-images.githubusercontent.com/102354821/182461192-c1a2712b-5969-4e61-ba5a-2ce15470ba99.jpg)
+
 # **Installation**
 
 Fork the repository.
