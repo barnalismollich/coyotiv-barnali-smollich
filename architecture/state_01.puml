@@ -47,4 +47,6 @@ Deletion --> State3: Aborted
 
 State4 -[#blue]-> [*] : Succeeded
 
+' The state file is important for the developer as it is her/his basis to develop the application.
+
 @enduml

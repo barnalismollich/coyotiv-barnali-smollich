@@ -23,4 +23,6 @@ deactivate B
 A --> FamilyMember: Document is stored
 deactivate A
 
+' A file is stored as a document. So initially it is a file and after having stored it, it is a document.
+
 @enduml
