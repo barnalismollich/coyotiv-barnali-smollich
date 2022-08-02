@@ -32,24 +32,22 @@ Backend: MongoDB Atlas, Docker, Google Cloud Run, socket.io, Node.js
 In Google Cloud Run one was able to see the application in the productive environment during the course. As it was a showcase project and not to be used in real life, it is inactive now. Here are some screenshots from the frontend and backend.
 
 Login page:
-![image (5)](https://user-images.githubusercontent.com/102354821/182450443-0ec157f8-816f-46dd-93b8-bb5208f8b16a.png)
+![Login page](https://user-images.githubusercontent.com/102354821/182457298-2da2e776-110f-49f1-a7bf-8e8932ed48d5.jpg)
+
 
 Welcome page with chat function:
-![image (6)](https://user-images.githubusercontent.com/102354821/182450713-836ac33a-8465-4d1f-a8ee-5526083be1aa.png)
+![Welcome page](https://user-images.githubusercontent.com/102354821/182457329-06a1760a-db6e-413f-a157-439cd8066ead.jpg)
 
-User specific page with individual documents:
-![image (12)](https://user-images.githubusercontent.com/102354821/182450337-aada04cc-ead8-4119-8eac-f6bc4a948bdf.png)
-
-Terms and Conditions
-![image (10)](https://user-images.githubusercontent.com/102354821/182450813-18751f61-aad1-4894-afb7-aa2954ef8abb.png)
+If you clicked on your name you were directed to the user page with your documents:
+![Overview documents](https://user-images.githubusercontent.com/102354821/182457346-2f500417-1835-4c62-8719-f40108963e46.jpg)
 
 Privacy Policy
-![image (10)](https://user-images.githubusercontent.com/102354821/182450848-6a30b642-b43d-49de-aae6-dc9f5d7248e1.png)
+![Privacy Policy](https://user-images.githubusercontent.com/102354821/182457395-fa8bdefe-aaa8-4801-97f4-c1a6cc408d5f.jpg)
 
-A cookies policy and disclaimer were also created but in order to keep this README short I have not added screenshots here.
+A cookies policy, terms of use and disclaimer were also created but in order to keep this README short and readable I have not added screenshots here. Their layout was similar to the privacy policy.
 
 Backend:
-![image (3)](https://user-images.githubusercontent.com/102354821/182451146-c2102bdd-a278-471b-82dd-4d2db53fc1f9.png)
+![Backend](https://user-images.githubusercontent.com/102354821/182457416-38b278ea-3727-4a0a-b7a9-7a0dbeffac87.jpg)
 
 # **Installation**
 
