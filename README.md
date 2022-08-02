@@ -34,9 +34,8 @@ In Google Cloud Run one was able to see the application in the productive enviro
 Login page:
 ![Login page](https://user-images.githubusercontent.com/102354821/182457298-2da2e776-110f-49f1-a7bf-8e8932ed48d5.jpg)
 
-
 Welcome page with chat function:
-![Welcome page](https://user-images.githubusercontent.com/102354821/182457329-06a1760a-db6e-413f-a157-439cd8066ead.jpg)
+![Welcome page](https://user-images.githubusercontent.com/102354821/182458079-f1c7e3c1-3f48-4fea-894d-e2e87fd3ffa0.jpg)
 
 If you clicked on your name you were directed to the user page with your documents:
 ![Overview documents](https://user-images.githubusercontent.com/102354821/182457346-2f500417-1835-4c62-8719-f40108963e46.jpg)
