@@ -29,6 +29,28 @@ Frontend: Vue.js, Vuex, HTML, CSS, JavaScript, balsamiq
 
 Backend: MongoDB Atlas, Docker, Google Cloud Run, socket.io, node
 
+In Google Cloud Run one was able to see the application in the productive environment during the course. As it was a showcase project and not to be used in real life, it is inactive now. Here are some screenshots from the frontend and backend.
+
+Login page:
+![image (5)](https://user-images.githubusercontent.com/102354821/182450443-0ec157f8-816f-46dd-93b8-bb5208f8b16a.png)
+
+Welcome page with chat function:
+![image (6)](https://user-images.githubusercontent.com/102354821/182450713-836ac33a-8465-4d1f-a8ee-5526083be1aa.png)
+
+User specific page with individual documents:
+![image (12)](https://user-images.githubusercontent.com/102354821/182450337-aada04cc-ead8-4119-8eac-f6bc4a948bdf.png)
+
+Terms and Conditions
+![image (10)](https://user-images.githubusercontent.com/102354821/182450813-18751f61-aad1-4894-afb7-aa2954ef8abb.png)
+
+Privacy Policy
+![image (10)](https://user-images.githubusercontent.com/102354821/182450848-6a30b642-b43d-49de-aae6-dc9f5d7248e1.png)
+
+A cookies policy and disclaimer were also created but in order to keep this README short I have not added screenshots here.
+
+Backend:
+![image (3)](https://user-images.githubusercontent.com/102354821/182451146-c2102bdd-a278-471b-82dd-4d2db53fc1f9.png)
+
 # **Installation**
 
 Fork the repository.
@@ -45,8 +67,6 @@ Open the project in your coding environment and install the dependencies with th
 `$ docker-compose up`
 
 # **Access the stack from the browser**
-
-![logo_familydiary](https://user-images.githubusercontent.com/102354821/180817016-34616265-c500-41c4-ab6e-937220d9c799.jpg)
 
 Open up your /etc/hosts file.
 
