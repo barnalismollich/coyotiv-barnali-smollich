@@ -4,20 +4,20 @@ In the main branch in Github of barnalismollich/coyotiv-barnali-smollich you can
 
 # **Project idea**
 
-My project called "Family Diary" has the intention to be a website which should function as a  storage of our most important documents. Only family members (husband, all children and me) should have access to this page. Starting point should be a login page as the contents is sensitive. The main page is a list of our most important documents (testament, living will, power of attorney, passport number, vaccination certicate and so on) which in case of emergency can be accessed fast and easily.
+My project called "Family Diary" had the intention to be a website which should function as a  storage of the most important documents of a family or a defined group. In my case, only family members (husband, children and me) were allowed to this page. Starting point was a login page as the contents was sensitive. The main page was a list of our most important documents (testament, living will, power of attorney, passport number, vaccination certicate and so on) which in case of emergency could have been accessed fast and easily.
 
 # **Goal**
 
-Store the most important documents in the application i.e. upload and download of documents are possible (although usability has to be improved).
+Create an application (website) to store the most important (family) documents i.e. upload and download of documents should be possible.
 
 # **Non-Goals**
 
 1. Information only for family and not for the public (thus login and logout functions are mandatory).
-2. No todo or shopping list.
+2. No todo or shopping list or the like.
 3. Form follows function, i.e. the website contains mandatory stuff (Privacy Policy, Terms of use) but is not a fancy website.
 4. Only storage of documents. No storage of photos, videos and audios in the first version.
-5. Chat tool is integrated but more to show that I have worked with socket.io and not because it is a mandatory feature.
-6. Deletion of documents and version control are not possible until now.
+5. Chat tool is integrated but more to show that I have worked with socket.io and not because it was a mandatory feature.
+6. Deletion of documents and version control are not mandatory in the first version.
 
 # **References and Sources**
 
@@ -27,7 +27,7 @@ Evernote, Penzu, Jimdo and Wix templates, tutorials at Coyotiv UG e.g. balsamiq,
 
 Frontend: Vue.js, Vuex, HTML, CSS, JavaScript, balsamiq
 
-Backend: MongoDB Atlas, Docker, Google Cloud Run, socket.io, node
+Backend: MongoDB Atlas, Docker, Google Cloud Run, socket.io, Node.js
 
 In Google Cloud Run one was able to see the application in the productive environment during the course. As it was a showcase project and not to be used in real life, it is inactive now. Here are some screenshots from the frontend and backend.
 
@@ -84,6 +84,11 @@ Add the following line to your hosts file
 You can also run the app in development environment if desired. Instead of running docker-compose up, run the following command:
 
 `$ docker-compose -f docker-compose.yml -f docker-compose.dev.yml up`
+
+# **Contributions and Thank You**
+
+If you have any comments to my application e.g. improvment, bugs or the like please do not hesitate to contact me via Github.com.
+I also would like to thank the assistant teachers at Coyotiv UG and the students of my Cohort-8 to support me during the development phase.
 
 # **License**
 
